@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public virtual void OnInteractStart(){}
-    public virtual void OnInteractEnd(){}
+    public virtual void OnInteractStart(){
+
+    }
+    public virtual void OnInteractEnd(){
+        
+    }
 }
