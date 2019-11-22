@@ -385,3 +385,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 069dd0a92a2b71543949e75c6d54e1cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCard: {fileID: 0}
