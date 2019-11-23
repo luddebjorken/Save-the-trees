@@ -21,10 +21,12 @@ public class World : MonoBehaviour
     public float TreeBurnTime;
     public static World singleton;
     public List<InteractTile> TreesPlaced;
+    public int TreesAmount;
     
     // Start is called before the first frame update
     void Start()
     {
+        TreesAmount = TreesToPlace;
         this.TreesPlaced = new List<InteractTile>();
         if(!singleton) singleton = this;
         tiles = new InteractTile[(int)Size.x,(int)Size.y];
@@ -44,6 +46,7 @@ public class World : MonoBehaviour
             InteractTile tile = GetTile(new Vector2(Random.Range(0,(int)Size.x),Random.Range(0,(int)Size.y)));
             tile.SetType(TileType.Tree);
             TreesPlaced.Add(tile);
+            TreesAmount++;
         }
         while(TreesPlaced.Count < TreesToPlace)
         {
@@ -62,7 +65,6 @@ public class World : MonoBehaviour
             if(tile && tile.type == TileType.Grass)
             {
                 tile.Child = Instantiate(HouseModel, tile.transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,4)*90,0));
-                HousesPlaced++;
             }
         }
     }

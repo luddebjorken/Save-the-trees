@@ -41,6 +41,9 @@ public class InteractTile : Interactable
             if(Time.time - BurnStart > (type == TileType.Tree?World.singleton.TreeBurnTime : type == TileType.Grass ? World.singleton.GrassBurnTime : Mathf.Infinity))
             {
                 IsBurning = false;
+                if(type == TileType.Tree){
+                    World.singleton.TreesAmount--;
+                }
                 SetType(TileType.Ash);
             }
             else if(Random.Range(0.0f,1.0f) < (type == TileType.Tree?World.singleton.TreeSpreadChance : type == TileType.Grass ? World.singleton.GrassSpreadChance : 0))
