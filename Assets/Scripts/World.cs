@@ -14,6 +14,7 @@ public class World : MonoBehaviour
     public Transform HouseModel;
     [Header("Tile reference")]
     public Transform TilePrefab;
+    public Transform WaterTilePrefab;
     public Transform WorldParent;
     [Header("Spawn settings")]
     public Vector2 Size;
@@ -32,18 +33,32 @@ public class World : MonoBehaviour
     public List<InteractTile> TreesPlaced;
     
     // Start is called before the first frame update
+    void Awake()
+    {
+        if(!singleton) singleton = this;
+    }
     void Start()
     {
         this.TreesPlaced = new List<InteractTile>();
-        if(!singleton) singleton = this;
-        tiles = new InteractTile[(int)Size.x,(int)Size.y];
+        tiles = new InteractTile[(int)Size.x,(int)Size.y];//jag åt en sprödbakadåsna engång
         for(int x = 0; x < (int)Size.x; x++)
         {
             for(int y = 0; y < (int)Size.y; y++)
             {
-                tiles[x,y] = Instantiate(TilePrefab, new Vector3(x,0,y), transform.rotation, WorldParent).GetComponent<InteractTile>();
+                tiles[x,y] = Instantiate(TilePrefab, new Vector3(x,0,y), Quaternion.Euler(0,Random.Range(0,3)*90,0), WorldParent).GetComponent<InteractTile>();
                 tiles[x,y].x = x;
                 tiles[x,y].y = y;
+            }
+        }
+
+        //Border water tiles
+        for(int x = (int)(-Size.x*0.5f) - 1; x < Size.x*1.5 + 1; x++)
+        {
+            float test = (x<Size.x/2?(int)(Size.y)+x:(Size.y-x+Size.x/2));
+            for(int y = (int)(x < Size.x/2 ? - x : -Size.y + x)-1; y < (x<Size.x/2?(int)(Size.y)+x:(Size.y-x+Size.x)) + 1; y++)
+            {
+                if(x >= 0 && y >= 0 && x < Size.x && y < Size.y) continue;
+                Instantiate(WaterTilePrefab, new Vector3(x,0,y), Quaternion.Euler(0,Random.Range(0,3)*90,0), WorldParent);
             }
         }
 
