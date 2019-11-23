@@ -71,7 +71,7 @@ public class InteractTile : Interactable
         }
         else
         {
-            Material.color = Color.green;
+            Material.color = Color.white;
         }
         IsBurning = state;
     }

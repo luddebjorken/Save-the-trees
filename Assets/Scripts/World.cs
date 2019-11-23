@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
+    [Header("Blocks")]
     public Mesh AshBlock;
     public Mesh GrassBlock;
     public Mesh DirtBlock;
     public Mesh WaterBlock;
+    [Header("Props")]
     public Transform TreeModel;
     public Transform HouseModel;
+    [Header("Tile reference")]
     public Transform TilePrefab;
     public Transform WorldParent;
+    [Header("Spawn settings")]
     public Vector2 Size;
-    public InteractTile[,] tiles;
     public int TreesToPlace;
+    public InteractTile[,] tiles;
+    [Header("Fire spread settings")]
     public float TreeSpreadChance;
     public float GrassSpreadChance;
     public float GrassBurnTime;
     public float TreeBurnTime;
     public static World singleton;
+    [Header("Fire start settings")]
+    public float RandomFireStartChance;
+    public float RandomFireStartRadius;
+    public float RandomFireStartMaxCount;
     public List<InteractTile> TreesPlaced;
     
     // Start is called before the first frame update
@@ -41,13 +50,13 @@ public class World : MonoBehaviour
         //Spreads random trees from 4 random locations
         for(int i = 0; i < 4; i++)
         {
-            InteractTile tile = GetTile(new Vector2(Random.Range(0,(int)Size.x),Random.Range(0,(int)Size.y)));
+            InteractTile tile = GetRandomTile();
             tile.SetType(TileType.Tree);
             TreesPlaced.Add(tile);
         }
         while(TreesPlaced.Count < TreesToPlace)
         {
-            InteractTile tile = World.singleton.GetTile(TreesPlaced[Random.Range(0,TreesPlaced.Count)].GetDirection(Random.Range(0,4)));
+            InteractTile tile = GetTile(TreesPlaced[Random.Range(0,TreesPlaced.Count)].GetDirection(Random.Range(0,4)));
             if(tile && tile.type == TileType.Grass)
             {
                 tile.SetType(TileType.Tree);
@@ -58,7 +67,7 @@ public class World : MonoBehaviour
         int HousesPlaced = 0;
         while(HousesPlaced < HousesToPlace)
         {
-            InteractTile tile = GetTile(new Vector2(Random.Range(0,(int)Size.x),Random.Range(0,(int)Size.y)));
+            InteractTile tile = GetRandomTile();
             if(tile && tile.type == TileType.Grass)
             {
                 tile.Child = Instantiate(HouseModel, tile.transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,4)*90,0));
@@ -73,8 +82,25 @@ public class World : MonoBehaviour
         return tiles[(int)pos.x, (int)pos.y];
     }
 
-    // Update is called once per frame
+    public InteractTile GetRandomTile()
+    {
+        return GetTile(new Vector2(Random.Range(0,(int)Size.x),Random.Range(0,(int)Size.y)));
+    }
+
     void Update()
     {
+        if(Random.Range(0.0f,1.0f) < RandomFireStartChance)
+        {
+            for(int i = 0; i < Random.Range(0,RandomFireStartMaxCount); i++)
+            {
+                Collider[] HitColliders = Physics.OverlapSphere(GetRandomTile().transform.position, Random.Range(0.0f, RandomFireStartRadius));
+                foreach(Collider HitCollider in HitColliders){
+                    InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
+                    if(TileComponent){
+                        TileComponent.SetFireState(true);
+                    }
+                }
+            }
+        }
     }
 }

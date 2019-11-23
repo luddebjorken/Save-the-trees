@@ -291,6 +291,9 @@ MonoBehaviour:
   GrassSpreadChance: 0.008
   GrassBurnTime: 10
   TreeBurnTime: 15
+  RandomFireStartChance: 0.003
+  RandomFireStartRadius: 2
+  RandomFireStartMaxCount: 2
   TreesPlaced: []
 --- !u!4 &1063362270
 Transform:
