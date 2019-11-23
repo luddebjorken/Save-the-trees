@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a441d4d160871438e483ad0107c0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   HasTree: 0
   IsBurning: 0
   BurnStart: 0

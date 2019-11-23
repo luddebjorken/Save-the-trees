@@ -12,6 +12,7 @@ public class World : MonoBehaviour
     [Header("Props")]
     public Transform TreeModel;
     public Transform HouseModel;
+    public Transform GrassModel;
     [Header("Tile reference")]
     public Transform TilePrefab;
     public Transform WaterTilePrefab;
@@ -19,6 +20,7 @@ public class World : MonoBehaviour
     [Header("Spawn settings")]
     public Vector2 Size;
     public int TreesToPlace;
+    public int GrassToPlace;
     public InteractTile[,] tiles;
     [Header("Fire spread settings")]
     public float TreeSpreadChance;
@@ -65,28 +67,58 @@ public class World : MonoBehaviour
         }
 
         //Spreads random trees from 4 random locations
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < 4;)
         {
             InteractTile tile = GetRandomTile();
-            tile.SetType(TileType.Tree);
-            TreesPlaced.Add(tile);
-            TreesAmount++;
+            if(tile.type == TileType.Dirt)
+            {
+                tile.SetType(TileType.Tree);
+                TreesPlaced.Add(tile);
+                TreesAmount++;
+                i++;    
+            }
         }
-        while(TreesPlaced.Count < TreesToPlace)
+
+        for(int i = 0; i < TreesToPlace*100 && TreesPlaced.Count < TreesToPlace; i++)
         {
             InteractTile tile = GetTile(TreesPlaced[Random.Range(0,TreesPlaced.Count)].GetDirection(Random.Range(0,4)));
-            if(tile && tile.type == TileType.Grass)
+            if(tile && tile.type == TileType.Dirt)
             {
                 tile.SetType(TileType.Tree);
                 TreesPlaced.Add(tile);
             }
         }
+
+        List<InteractTile> grassPlaced = new List<InteractTile>();
+
+        //Spreads random grass 
+        for(int i = 0; i < 4;)
+        {
+            InteractTile tile = GetRandomTile();
+            if(tile.type == TileType.Dirt)
+            {
+                tile.SetType(TileType.Grass);
+                grassPlaced.Add(tile);
+                i++;
+            }
+        }
+
+        for(int i = 0; i < GrassToPlace*100 && grassPlaced.Count < GrassToPlace; i++)
+        {
+            InteractTile tile = GetTile(grassPlaced[Random.Range(0,grassPlaced.Count)].GetDirection(Random.Range(0,4)));
+            if(tile && tile.type == TileType.Dirt)
+            {
+                tile.SetType(TileType.Grass);
+                grassPlaced.Add(tile);
+            }
+        }
+
         int HousesToPlace = Random.Range(0,10);
         int HousesPlaced = 0;
         while(HousesPlaced < HousesToPlace)
         {
             InteractTile tile = GetRandomTile();
-            if(tile && tile.type == TileType.Grass)
+            if(tile && tile.type == TileType.Dirt)
             {
                 tile.Child = Instantiate(HouseModel, tile.transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,4)*90,0));
                 HousesPlaced++;

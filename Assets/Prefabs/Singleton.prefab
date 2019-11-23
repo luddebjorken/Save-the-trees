@@ -55,13 +55,17 @@ MonoBehaviour:
     type: 3}
   HouseModel: {fileID: -4216859302048453862, guid: f72e293f809b84743a17961674ffb6bb,
     type: 3}
+  GrassModel: {fileID: 4748515275550769363, guid: e68a5511fe3b97d43a6ff0dc0fbeebbe,
+    type: 3}
   TilePrefab: {fileID: 6973778312745794222, guid: 2fff3bd3ef7275c4d9132a183b839263,
     type: 3}
   WaterTilePrefab: {fileID: 6973778312745794222, guid: c037f7d51484ce340aa59e372f8c31e1,
     type: 3}
-  WorldParent: {fileID: 0}
+  WorldParent: {fileID: -4216859302048453862, guid: dda1524b589e4774fbb64c17d5a04df8,
+    type: 3}
   Size: {x: 50, y: 50}
   TreesToPlace: 400
+  GrassToPlace: 400
   TreeSpreadChance: 0.006
   GrassSpreadChance: 0.008
   GrassBurnTime: 10
