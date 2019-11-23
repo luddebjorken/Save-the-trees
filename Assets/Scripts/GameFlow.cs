@@ -7,19 +7,28 @@ public class GameFlow : MonoBehaviour
 {
     public float DeathTime;
     public static GameFlow singleton;
+    public HealthBar HPBar;
     void Awake()
     {
         singleton = this;
-        enabled = false;
+    }
+
+    void Start()
+    {
+        HPBar = FindObjectOfType<HealthBar>();
     }
 
     void Update()
     {
+        HPBar.updateHealth((float)World.singleton.TreesAmount/(World.singleton.TreesToPlace + 4));
         if(World.singleton.TreesAmount <= 0)
         {
             //Disables fire spawning
             World.singleton.enabled = false;
+            enabled = false;
+            StartCoroutine("ResetTimer");
         }
+
     }
 
     IEnumerator ResetTimer()

@@ -45,7 +45,6 @@ public class World : MonoBehaviour
     }
     void Start()
     {
-        TreesAmount = TreesToPlace;
         this.TreesPlaced = new List<InteractTile>();
 
         //Places tiles
@@ -124,7 +123,6 @@ public class World : MonoBehaviour
                 Instantiate(WaterTilePrefab, new Vector3(x,-0.9f,y), Quaternion.Euler(0,Random.Range(0,3)*90,0), WorldParent);
             }
         }
-
         //Spreads random trees from 4 random locations
         for(int i = 0; i < 4;)
         {
@@ -133,11 +131,10 @@ public class World : MonoBehaviour
             {
                 tile.SetType(TileType.Tree);
                 TreesPlaced.Add(tile);
-                TreesAmount++;
                 i++;    
             }
         }
-        for(int i = 0; i < TreesToPlace*100 && TreesPlaced.Count < TreesToPlace; i++)
+        for(int i = 0; i < TreesToPlace*100 && TreesPlaced.Count < TreesToPlace - 4; i++)
         {
             InteractTile tile = GetTile(TreesPlaced[Random.Range(0,TreesPlaced.Count)].GetDirection(Random.Range(0,4)));
             if(tile && tile.type == TileType.Dirt)
@@ -147,6 +144,7 @@ public class World : MonoBehaviour
             }
         }
 
+        TreesAmount = TreesPlaced.Count;
 
         //Spreads random grass 
         List<InteractTile> grassPlaced = new List<InteractTile>();
