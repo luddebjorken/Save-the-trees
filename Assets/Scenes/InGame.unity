@@ -273,8 +273,13 @@ MonoBehaviour:
   TilePrefab: {fileID: 6973778312745794222, guid: 2fff3bd3ef7275c4d9132a183b839263,
     type: 3}
   WorldParent: {fileID: 395458091}
-  SpreadChance: 0.01
-  Size: {x: 50, y: 50}
+  Size: {x: 35, y: 25}
+  TreesToPlace: 400
+  TreeSpreadChance: 0.006
+  GrassSpreadChance: 0.008
+  GrassBurnTime: 10
+  TreeBurnTime: 15
+  TreesPlaced: []
 --- !u!4 &1063362270
 Transform:
   m_ObjectHideFlags: 0
@@ -342,8 +347,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 9.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -366,13 +371,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139133217}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 50, y: 88.29, z: 50}
+  m_LocalRotation: {x: 0.42103577, y: 0, z: 0, w: 0.90704405}
+  m_LocalPosition: {x: 17.1, y: 18.5, z: -3.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 49.8, y: 0, z: 0}
 --- !u!114 &2139133221
 MonoBehaviour:
   m_ObjectHideFlags: 0

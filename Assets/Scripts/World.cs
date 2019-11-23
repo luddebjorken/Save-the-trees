@@ -6,13 +6,20 @@ public class World : MonoBehaviour
 {
     public Transform TilePrefab;
     public Transform WorldParent;
-    public InteractTile[,] tiles;
-    public float SpreadChance;
-    public static World singleton;
     public Vector2 Size;
+    public InteractTile[,] tiles;
+    public int TreesToPlace;
+    public float TreeSpreadChance;
+    public float GrassSpreadChance;
+    public float GrassBurnTime;
+    public float TreeBurnTime;
+    public static World singleton;
+    public List<InteractTile> TreesPlaced;
+    
     // Start is called before the first frame update
     void Start()
     {
+        this.TreesPlaced = new List<InteractTile>();
         if(!singleton) singleton = this;
         tiles = new InteractTile[(int)Size.x,(int)Size.y];
         for(int x = 0; x < (int)Size.x; x++)
@@ -24,6 +31,25 @@ public class World : MonoBehaviour
                 tiles[x,y].y = y;
             }
         }
+
+        //Spreads random trees from 4 random locations
+        for(int i = 0; i < 4; i++)
+        {
+            InteractTile tile = GetTile(new Vector2(Random.Range(0,(int)Size.x),Random.Range(0,(int)Size.y)));
+            tile.SetType(TileType.Tree);
+            TreesPlaced.Add(tile);
+        }
+        while(TreesPlaced.Count < TreesToPlace)
+        {
+            InteractTile tile = World.singleton.GetTile(TreesPlaced[Random.Range(0,TreesPlaced.Count)].GetDirection(Random.Range(0,4)));
+            if(tile && tile.type == TileType.Grass)
+            {
+                tile.SetType(TileType.Tree);
+                TreesPlaced.Add(tile);
+            }
+        }
+
+
     }
 
     public InteractTile GetTile(Vector2 pos)
