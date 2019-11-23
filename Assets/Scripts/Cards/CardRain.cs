@@ -8,10 +8,10 @@ public class CardRain : CardBase
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
-        if(selectedTiles.Count < 0) Debug.LogError("NO TILES WERE FOUND!");
+        if(selectedTiles == null) Debug.LogError("NO TILES WERE FOUND!");
         foreach(InteractTile selectedTile in selectedTiles)
         {
-            tile.SetFireState(false);
+            selectedTile.SetFireState(false);
         }
     }
 
