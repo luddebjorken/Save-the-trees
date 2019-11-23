@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/CardPrefabs/PlaneCard.prefab.meta
 guid: 1c254d145ff01b64bbd4416badc13dc9
 PrefabImporter:
+=======
+guid: 2bab0c3558496af49804188eed548380
+folderAsset: yes
+DefaultImporter:
+>>>>>>> f3b69658482682c11fd802398c2db51dd25054de:Assets/Resources/CardImages.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
