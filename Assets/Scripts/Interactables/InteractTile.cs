@@ -7,7 +7,8 @@ public enum TileType
     Grass,
     Dirt,
     Tree,
-    Ash
+    Ash,
+    Water
 }
 
 public class InteractTile : Interactable

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4907440377291614848}
   - component: {fileID: 4907440377291614851}
+  - component: {fileID: 238572740}
   m_Layer: 0
   m_Name: Singleton
   m_TagString: Untagged
@@ -61,11 +62,10 @@ MonoBehaviour:
     type: 3}
   WaterTilePrefab: {fileID: 6973778312745794222, guid: c037f7d51484ce340aa59e372f8c31e1,
     type: 3}
-  WorldParent: {fileID: -4216859302048453862, guid: dda1524b589e4774fbb64c17d5a04df8,
-    type: 3}
+  WorldParent: {fileID: 0}
   Size: {x: 50, y: 50}
-  TreesToPlace: 400
-  GrassToPlace: 400
+  TreesToPlace: 0
+  GrassToPlace: 1000
   TreeSpreadChance: 0.006
   GrassSpreadChance: 0.008
   GrassBurnTime: 10
@@ -75,3 +75,16 @@ MonoBehaviour:
   RandomFireStartMaxCount: 2
   TreesPlaced: []
   TreesAmount: 0
+--- !u!114 &238572740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907440377291614850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e284ab82182bca479c649e2dd71ed2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathTime: 3

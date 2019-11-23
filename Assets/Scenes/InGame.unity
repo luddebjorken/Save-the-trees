@@ -511,15 +511,5 @@ PrefabInstance:
       propertyPath: WorldParent
       value: 
       objectReference: {fileID: 395458091}
-    - target: {fileID: 4907440377291614851, guid: 2d25358525d6bbe4dbef8eeb6b5addc6,
-        type: 3}
-      propertyPath: TreesToPlace
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4907440377291614851, guid: 2d25358525d6bbe4dbef8eeb6b5addc6,
-        type: 3}
-      propertyPath: GrassToPlace
-      value: 1000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d25358525d6bbe4dbef8eeb6b5addc6, type: 3}

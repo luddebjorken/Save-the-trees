@@ -130,6 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCard: {fileID: 7963850554976265883, guid: 3dfab22f1b8fbd34985eb697456ab230,
     type: 3}
+  direction: 0
+  HighlightTint: {r: 0.6179246, g: 1, b: 0.9440403, a: 1}
+  FireHighlightTint: {r: 1, g: 0.71083266, b: 0.18396229, a: 1}
 --- !u!114 &2496787256169028439
 MonoBehaviour:
   m_ObjectHideFlags: 0

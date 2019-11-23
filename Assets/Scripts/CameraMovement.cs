@@ -19,6 +19,7 @@ public class CameraMovement : MonoBehaviour
         lowerLimit = new Vector2(cameraSize.x - cameraWorldSize.x,cameraSize.y+1);
         upperLimit = cameraWorldSize - cameraSize;
         upperLimit.y += 2.5f;
+        camera.transform.localPosition = Vector3.Lerp(lowerLimit, upperLimit, 0.5f);
         //upperLimit.y -= cameraSize.y/Mathf.Tan(transform.eulerAngles.x*Mathf.PI/180);
     }
 

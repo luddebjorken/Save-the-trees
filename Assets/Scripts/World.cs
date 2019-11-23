@@ -44,7 +44,9 @@ public class World : MonoBehaviour
     {
         TreesAmount = TreesToPlace;
         this.TreesPlaced = new List<InteractTile>();
-        tiles = new InteractTile[(int)Size.x,(int)Size.y];//jag åt en sprödbakadåsna engång
+
+        //Places tiles
+        tiles = new InteractTile[(int)Size.x,(int)Size.y];
         for(int x = 0; x < (int)Size.x; x++)
         {
             for(int y = 0; y < (int)Size.y; y++)
@@ -56,13 +58,13 @@ public class World : MonoBehaviour
         }
 
         //Border water tiles
-        for(int x = (int)(-Size.x*0.5f) - 1; x < Size.x*1.5 + 1; x++)
+        for(int x = (int)(-Size.x*0.5f) - 1; x < Size.x*1.5 + 3; x++)
         {
             float test = (x<Size.x/2?(int)(Size.y)+x:(Size.y-x+Size.x/2));
-            for(int y = (int)(x < Size.x/2 ? - x : -Size.y + x)-1; y < (x<Size.x/2?(int)(Size.y)+x:(Size.y-x+Size.x)) + 1; y++)
+            for(int y = (int)(x < Size.x/2 ? - x : -Size.y + x)-1; y < (x<Size.x/2?(int)(Size.y)+x:(Size.y-x+Size.x)) + 3; y++)
             {
                 if(x >= 0 && y >= 0 && x < Size.x && y < Size.y) continue;
-                Instantiate(WaterTilePrefab, new Vector3(x,0,y), Quaternion.Euler(0,Random.Range(0,3)*90,0), WorldParent);
+                Instantiate(WaterTilePrefab, new Vector3(x,-0.9f,y), Quaternion.Euler(0,Random.Range(0,3)*90,0), WorldParent);
             }
         }
 
@@ -78,7 +80,6 @@ public class World : MonoBehaviour
                 i++;    
             }
         }
-
         for(int i = 0; i < TreesToPlace*100 && TreesPlaced.Count < TreesToPlace; i++)
         {
             InteractTile tile = GetTile(TreesPlaced[Random.Range(0,TreesPlaced.Count)].GetDirection(Random.Range(0,4)));
@@ -89,9 +90,9 @@ public class World : MonoBehaviour
             }
         }
 
-        List<InteractTile> grassPlaced = new List<InteractTile>();
 
         //Spreads random grass 
+        List<InteractTile> grassPlaced = new List<InteractTile>();
         for(int i = 0; i < 4;)
         {
             InteractTile tile = GetRandomTile();
@@ -102,7 +103,6 @@ public class World : MonoBehaviour
                 i++;
             }
         }
-
         for(int i = 0; i < GrassToPlace*100 && grassPlaced.Count < GrassToPlace; i++)
         {
             InteractTile tile = GetTile(grassPlaced[Random.Range(0,grassPlaced.Count)].GetDirection(Random.Range(0,4)));
@@ -113,6 +113,7 @@ public class World : MonoBehaviour
             }
         }
 
+        //Places random houses
         int HousesToPlace = Random.Range(0,10);
         int HousesPlaced = 0;
         while(HousesPlaced < HousesToPlace)

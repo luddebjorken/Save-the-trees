@@ -6,8 +6,10 @@ public class InteractComponent : MonoBehaviour
 {
     // Start is called before the first frame update
     public CardBase currentCard;
+    public int direction;
     List<InteractTile> highlitTiles;
     public static InteractComponent singleton;
+    public Color HighlightTint, FireHighlightTint;
     void Start()
     {
         singleton = this;
@@ -27,27 +29,44 @@ public class InteractComponent : MonoBehaviour
                 if(interactObject && currentCard)
                 {
                     currentCard.HoverStart(interactObject);
-                    if(Input.GetButton("Fire1"))
+                    if(Input.GetButtonDown("Fire1"))
                     {
                         currentCard.Use(interactObject);
                     }
                 }
             }
         }
+
+        if(Input.GetButtonDown("Fire2"))
+        {
+            direction = (direction+1)%4;
+        }
+    }
+
+    public Vector3 GetDirection()
+    {
+        switch(direction)
+        {
+            case 0: return new Vector3(1,0,0); 
+            case 1: return new Vector3(0,0,-1); 
+            case 2: return new Vector3(-1,0,0);
+            case 3: return new Vector3(0,0,1);
+        }
+        return Vector3.zero;
     }
 
     public void HighlightTiles(List<InteractTile> tiles)
     {
         foreach(InteractTile tile in highlitTiles)
         {
-            tile.Material.SetFloat("_Highlit", 0.0f);
+            tile.Material.SetColor("_Color", tile.IsBurning ? new Color(1,0,0,1) : new Color(1,1,1,1));
         }
 
         highlitTiles = tiles;
         
         foreach(InteractTile tile in highlitTiles)
         {
-            tile.Material.SetFloat("_Highlit", 1.0f);
+            tile.Material.SetColor("_Color", tile.IsBurning ? FireHighlightTint : HighlightTint);
         }
     }
 }
