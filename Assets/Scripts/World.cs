@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
+    public Transform TreeModel;
+    public Transform HouseModel;
     public Transform TilePrefab;
     public Transform WorldParent;
     public Vector2 Size;
@@ -48,8 +50,17 @@ public class World : MonoBehaviour
                 TreesPlaced.Add(tile);
             }
         }
-
-
+        int HousesToPlace = Random.Range(0,10);
+        int HousesPlaced = 0;
+        while(HousesPlaced < HousesToPlace)
+        {
+            InteractTile tile = GetTile(new Vector2(Random.Range(0,(int)Size.x),Random.Range(0,(int)Size.y)));
+            if(tile && tile.type == TileType.Grass)
+            {
+                tile.Child = Instantiate(HouseModel, tile.transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,4)*90,0));
+                HousesPlaced++;
+            }
+        }
     }
 
     public InteractTile GetTile(Vector2 pos)

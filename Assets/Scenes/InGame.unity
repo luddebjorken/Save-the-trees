@@ -270,6 +270,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fc79e6f16caae4c87fa489bfde7602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TreeModel: {fileID: -4216859302048453862, guid: b6f4ba9a7e2effc4bac0b0ec1a777750,
+    type: 3}
+  HouseModel: {fileID: -4216859302048453862, guid: f72e293f809b84743a17961674ffb6bb,
+    type: 3}
   TilePrefab: {fileID: 6973778312745794222, guid: 2fff3bd3ef7275c4d9132a183b839263,
     type: 3}
   WorldParent: {fileID: 395458091}
