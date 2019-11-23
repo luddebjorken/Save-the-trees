@@ -5,14 +5,41 @@ using UnityEngine;
 public class CardRain : CardBase
 {
     public float Radius;
-    public override void Use(Interactable tile)
+    private List<InteractTile> selectedTiles;
+    public override void Use(InteractTile tile)
     {
-        Collider[] HitColliders = Physics.OverlapSphere(tile.transform.position,Radius);
+        if(selectedTiles.Count < 0) Debug.LogError("NO TILES WERE FOUND!");
+        foreach(InteractTile selectedTile in selectedTiles)
+        {
+            tile.SetFireState(false);
+        }
+    }
+
+    public override void HoverStart(InteractTile tile)
+    {
+        if(tile != LastTile)
+        {
+            selectedTiles = GetTiles(tile);
+            InteractComponent.singleton.HighlightTiles(selectedTiles);
+        }
+    }
+
+    public override void HoverEnd(InteractTile tile)
+    {
+        selectedTiles.Clear();
+    }
+
+    private List<InteractTile> GetTiles(InteractTile center)
+    {
+        List<InteractTile> ret = new List<InteractTile>();
+
+        Collider[] HitColliders = Physics.OverlapSphere(center.transform.position,Radius);
         foreach(Collider HitCollider in HitColliders){
             InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
             if(TileComponent){
-                TileComponent.SetFireState(false);
+                ret.Add(TileComponent);
             }
         }
+        return ret;
     }
 }

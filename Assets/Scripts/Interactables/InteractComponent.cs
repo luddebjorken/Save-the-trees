@@ -6,27 +6,48 @@ public class InteractComponent : MonoBehaviour
 {
     // Start is called before the first frame update
     public CardBase currentCard;
-
+    List<InteractTile> highlitTiles;
+    public static InteractComponent singleton;
     void Start()
     {
-        
+        singleton = this;
+        highlitTiles = new List<InteractTile>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Fire1"))
+        Ray interactRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(interactRay.origin,interactRay.direction * 1000, Color.red);
+        if(Physics.Raycast(interactRay, out RaycastHit hit, Mathf.Infinity))
         {
-            Ray interactRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Debug.DrawRay(interactRay.origin,interactRay.direction * 1000, Color.red);
-            if(Physics.Raycast(interactRay, out RaycastHit hit, Mathf.Infinity))
+            if(hit.transform.tag.Equals("Tile"))
             {
-                Interactable interactObject = hit.transform.GetComponent<Interactable>();
+                InteractTile interactObject = hit.transform.GetComponent<InteractTile>();
                 if(interactObject && currentCard)
                 {
-                    currentCard.Use(interactObject);
+                    currentCard.HoverStart(interactObject);
+                    if(Input.GetButton("Fire1"))
+                    {
+                        currentCard.Use(interactObject);
+                    }
                 }
             }
+        }
+    }
+
+    public void HighlightTiles(List<InteractTile> tiles)
+    {
+        foreach(InteractTile tile in highlitTiles)
+        {
+            tile.Material.SetFloat("_Highlit", 0.0f);
+        }
+
+        highlitTiles = tiles;
+        
+        foreach(InteractTile tile in highlitTiles)
+        {
+            tile.Material.SetFloat("_Highlit", 1.0f);
         }
     }
 }

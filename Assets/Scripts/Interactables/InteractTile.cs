@@ -17,18 +17,21 @@ public class InteractTile : Interactable
     public float BurnStart;
     public Transform Child;
     public int x,y;
-    private Material material;
+    public Material Material;
+    private MeshFilter mesh;
     
     void Awake()
     {
-        material = GetComponent<Renderer>().material;
+        Material = GetComponent<Renderer>().material;
+        mesh = GetComponent<MeshFilter>();
+        /*
         switch(type)
         {
             case TileType.Tree: material.color = Color.green; break;// new Color(23, 135, 30); break;
             case TileType.Ash: material.color = Color.gray; break;//new Color(77,77,77); break;
             default: material.color = Color.yellow; break;//new Color(118, 199, 20); break;
         }
-
+        */
     }
 
     void Update()
@@ -64,11 +67,11 @@ public class InteractTile : Interactable
         if(state)
         {
             BurnStart = Time.time;
-            material.color = Color.red;
+            Material.color = Color.red;
         }
         else
         {
-            material.color = Color.green;
+            Material.color = Color.green;
         }
         IsBurning = state;
     }
@@ -79,12 +82,16 @@ public class InteractTile : Interactable
         switch(type)
         {
             case TileType.Tree: 
-                material.color = Color.green; 
                 if(Child)Destroy(Child);
+                mesh.mesh = World.singleton.GrassBlock;
                 Child = Instantiate(World.singleton.TreeModel, transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,360),0), transform);
             break;// new Color(23, 135, 30); break;
-            case TileType.Ash: material.color = Color.gray; break;//new Color(77,77,77); break;
-            default: material.color = Color.yellow; break;//new Color(118, 199, 20); break;
+            case TileType.Ash: 
+                mesh.mesh = World.singleton.AshBlock;
+            break;
+            default:
+                mesh.mesh = World.singleton.GrassBlock;
+            break;
         }
     }
     

@@ -270,6 +270,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fc79e6f16caae4c87fa489bfde7602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AshBlock: {fileID: 6289545138269723696, guid: 0fa86ae8da646644aa6679cafe0e9270,
+    type: 3}
+  GrassBlock: {fileID: 420634776737977212, guid: 0405395ddd19f8e43b0e7ba0e570213a,
+    type: 3}
+  DirtBlock: {fileID: -914735228780501257, guid: 609ad2a45138dba4287f9031635ae97c,
+    type: 3}
+  WaterBlock: {fileID: 2866255845738885060, guid: f858344de57255840bdb4821bbecf167,
+    type: 3}
   TreeModel: {fileID: -4216859302048453862, guid: b6f4ba9a7e2effc4bac0b0ec1a777750,
     type: 3}
   HouseModel: {fileID: -4216859302048453862, guid: f72e293f809b84743a17961674ffb6bb,
@@ -394,4 +402,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 069dd0a92a2b71543949e75c6d54e1cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCard: {fileID: 0}
+  currentCard: {fileID: 7963850554976265883, guid: 3dfab22f1b8fbd34985eb697456ab230,
+    type: 3}

@@ -5,5 +5,8 @@ using UnityEngine;
 public class CardBase : MonoBehaviour
 {
     public int Price;
-    public virtual void Use(Interactable tile){}
+    protected InteractTile LastTile;
+    public virtual void Use(InteractTile tile){}
+    public virtual void HoverStart(InteractTile tile){}
+    public virtual void HoverEnd(InteractTile tile){}
 }

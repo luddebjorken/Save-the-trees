@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
+    public Mesh AshBlock;
+    public Mesh GrassBlock;
+    public Mesh DirtBlock;
+    public Mesh WaterBlock;
     public Transform TreeModel;
     public Transform HouseModel;
     public Transform TilePrefab;
