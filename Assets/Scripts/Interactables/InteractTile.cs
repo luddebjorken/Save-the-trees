@@ -73,10 +73,12 @@ public class InteractTile : Interactable
         {
             BurnStart = Time.time;
             Material.color = Color.red;
+            if(Child)Child.GetComponent<Renderer>().material.SetColor("Color", Color.red);
         }
         else
         {
             Material.color = Color.white;
+            if(Child)Child.GetComponent<Renderer>().material.SetColor("Color", Color.white);
         }
         IsBurning = state;
     }
