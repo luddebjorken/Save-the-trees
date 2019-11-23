@@ -5,7 +5,7 @@ using UnityEngine;
 public enum TileType
 {
     Grass,
-    Tallgrass,
+    Dirt,
     Tree,
     Ash
 }
@@ -67,7 +67,7 @@ public class InteractTile : Interactable
 
     public void SetFireState(bool state)
     {
-        if(state == IsBurning || type == TileType.Ash) return;
+        if(state == IsBurning || type == TileType.Ash || type == TileType.Dirt) return;
         if(state)
         {
             BurnStart = Time.time;
@@ -86,16 +86,21 @@ public class InteractTile : Interactable
         switch(type)
         {
             case TileType.Tree: 
-                if(Child)Destroy(Child);
                 mesh.mesh = World.singleton.GrassBlock;
+                if(Child)Destroy(Child);
                 Child = Instantiate(World.singleton.TreeModel, transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,360),0), transform);
             break;// new Color(23, 135, 30); break;
             case TileType.Ash: 
                 Material.color = Color.white;
                 mesh.mesh = World.singleton.AshBlock;
             break;
-            default:
+            case TileType.Grass:
                 mesh.mesh = World.singleton.GrassBlock;
+                if(Child)Destroy(Child);
+                Child = Instantiate(World.singleton.GrassModel, transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,4)*90,0), transform);
+            break;
+            default:
+                mesh.mesh = World.singleton.DirtBlock;
             break;
         }
     }
