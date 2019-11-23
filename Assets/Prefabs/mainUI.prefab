@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 8211993313134966370}
   - component: {fileID: 7760949679156331116}
   - component: {fileID: 7933388305363635430}
+  - component: {fileID: 5146507545862249179}
   m_Layer: 5
   m_Name: WindcardUI
   m_TagString: Untagged
@@ -490,6 +491,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5146507545862249179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4255344871423540762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03438e633974cda4c98d34f9a29fbefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Price: 0
+  Radius: 0
+  ExtinguishRange: 0
 --- !u!1 &4286607154260773881
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +518,7 @@ GameObject:
   - component: {fileID: 4374922516863422453}
   - component: {fileID: 964952785908017463}
   - component: {fileID: 3992527229830205539}
+  - component: {fileID: 8144265876522913217}
   m_Layer: 5
   m_Name: RaincardUI
   m_TagString: Untagged
@@ -607,6 +624,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8144265876522913217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286607154260773881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd162d46435b104290a07266a22ab47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Price: 0
+  Radius: 0
 --- !u!1 &4826499011399532238
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +650,7 @@ GameObject:
   - component: {fileID: 772497791714517361}
   - component: {fileID: 8828408098398384935}
   - component: {fileID: 3779618920182675959}
+  - component: {fileID: 95361996671762771}
   m_Layer: 5
   m_Name: ThundercardUI
   m_TagString: Untagged
@@ -724,6 +756,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &95361996671762771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826499011399532238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1146e066fd14e14f9f253157b816d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Price: 0
+  Radius: 0
+  LightningstrikeChance: 0
+  LightningStrikeRadius: 0
 --- !u!1 &7205490598142119613
 GameObject:
   m_ObjectHideFlags: 0

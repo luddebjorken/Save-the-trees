@@ -9,4 +9,10 @@ public class CardBase : MonoBehaviour
     public virtual void Use(InteractTile tile){}
     public virtual void HoverStart(InteractTile tile){}
     public virtual void HoverEnd(InteractTile tile){}
+
+    public void Select()
+    {
+        InteractComponent.singleton.HighlightTiles(new List<InteractTile>());
+        InteractComponent.singleton.currentCard = this;
+    }
 }

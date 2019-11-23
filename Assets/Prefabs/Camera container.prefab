@@ -128,10 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 069dd0a92a2b71543949e75c6d54e1cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCard: {fileID: -4217196147453637403, guid: 556449c11ae225c4f975d8cd0aa6e618,
-    type: 3}
+  currentCard: {fileID: 0}
   direction: 0
-  HighlightTint: {r: 0.6179246, g: 1, b: 0.9440403, a: 1}
+  HighlightTint: {r: 0, g: 1, b: 0.9419038, a: 1}
   FireHighlightTint: {r: 1, g: 0.71083266, b: 0.18396229, a: 1}
 --- !u!114 &2496787256169028439
 MonoBehaviour:

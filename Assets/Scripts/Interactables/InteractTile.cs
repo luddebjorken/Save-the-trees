@@ -27,14 +27,6 @@ public class InteractTile : Interactable
     {
         Material = GetComponent<Renderer>().material;
         mesh = GetComponent<MeshFilter>();
-        /*
-        switch(type)
-        {
-            case TileType.Tree: material.color = Color.green; break;// new Color(23, 135, 30); break;
-            case TileType.Ash: material.color = Color.gray; break;//new Color(77,77,77); break;
-            default: material.color = Color.yellow; break;//new Color(118, 199, 20); break;
-        }
-        */
     }
 
     void Update()
@@ -46,6 +38,11 @@ public class InteractTile : Interactable
                 IsBurning = false;
                 if(type == TileType.Tree){
                     World.singleton.TreesAmount--;
+                    //SET DEAD TREE MODEL
+                }
+                else if(type == TileType.Grass)
+                {
+                    if(Child)Destroy(Child.gameObject);
                 }
                 SetType(TileType.Ash);
             }
@@ -74,7 +71,7 @@ public class InteractTile : Interactable
         {
             BurnStart = Time.time;
             if(Fire)Destroy(Fire.gameObject);
-            Fire = Instantiate(World.singleton.FireModel, transform.position + new Vector3(0,1.77f,0),Quaternion.identity, transform);
+            Fire = Instantiate(World.singleton.FireModel, transform.position + new Vector3(0,1.77f,0),Quaternion.Euler(0,45,0), transform);
         }
         else
         {

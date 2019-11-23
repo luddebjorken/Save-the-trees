@@ -29,9 +29,11 @@ public class InteractComponent : MonoBehaviour
                 if(interactObject && currentCard)
                 {
                     currentCard.HoverStart(interactObject);
-                    if(Input.GetButtonDown("Fire1"))
+                    if(Input.GetButtonUp("Fire1"))
                     {
                         currentCard.Use(interactObject);
+                        currentCard = null;
+                        HighlightTiles(new List<InteractTile>());
                     }
                 }
             }
@@ -40,6 +42,12 @@ public class InteractComponent : MonoBehaviour
         if(Input.GetButtonDown("Fire2"))
         {
             direction = (direction+1)%4;
+        }
+
+        if(Input.GetButtonUp("Fire1"))
+        {
+            currentCard = null;
+            HighlightTiles(new List<InteractTile>());
         }
     }
 
