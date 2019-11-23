@@ -31,6 +31,7 @@ public class World : MonoBehaviour
     public float RandomFireStartRadius;
     public float RandomFireStartMaxCount;
     public List<InteractTile> TreesPlaced;
+    public int TreesAmount;
     
     // Start is called before the first frame update
     void Awake()
@@ -39,6 +40,7 @@ public class World : MonoBehaviour
     }
     void Start()
     {
+        TreesAmount = TreesToPlace;
         this.TreesPlaced = new List<InteractTile>();
         tiles = new InteractTile[(int)Size.x,(int)Size.y];//jag åt en sprödbakadåsna engång
         for(int x = 0; x < (int)Size.x; x++)
@@ -68,6 +70,7 @@ public class World : MonoBehaviour
             InteractTile tile = GetRandomTile();
             tile.SetType(TileType.Tree);
             TreesPlaced.Add(tile);
+            TreesAmount++;
         }
         while(TreesPlaced.Count < TreesToPlace)
         {
@@ -86,7 +89,6 @@ public class World : MonoBehaviour
             if(tile && tile.type == TileType.Grass)
             {
                 tile.Child = Instantiate(HouseModel, tile.transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,4)*90,0));
-                HousesPlaced++;
             }
         }
     }
