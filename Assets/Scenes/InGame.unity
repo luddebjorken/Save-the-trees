@@ -600,6 +600,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2496787256169028436, guid: f84fe1e77dc30f9499f1abb13f45efe5,
+        type: 3}
+      propertyPath: currentCard
+      value: 
+      objectReference: {fileID: -4217196147453637403, guid: 556449c11ae225c4f975d8cd0aa6e618,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f84fe1e77dc30f9499f1abb13f45efe5, type: 3}
 --- !u!1001 &4907440376329122910
@@ -674,5 +680,26 @@ PrefabInstance:
       propertyPath: WorldParent
       value: 
       objectReference: {fileID: 395458091}
+    - target: {fileID: 4907440377291614851, guid: 2d25358525d6bbe4dbef8eeb6b5addc6,
+        type: 3}
+      propertyPath: WaterBlock
+      value: 
+      objectReference: {fileID: -914735228780501257, guid: 609ad2a45138dba4287f9031635ae97c,
+        type: 3}
+    - target: {fileID: 4907440377291614851, guid: 2d25358525d6bbe4dbef8eeb6b5addc6,
+        type: 3}
+      propertyPath: RiverStepDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907440377291614851, guid: 2d25358525d6bbe4dbef8eeb6b5addc6,
+        type: 3}
+      propertyPath: RiverTurnStrength
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907440377291614851, guid: 2d25358525d6bbe4dbef8eeb6b5addc6,
+        type: 3}
+      propertyPath: TreesToPlace
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d25358525d6bbe4dbef8eeb6b5addc6, type: 3}

@@ -68,7 +68,7 @@ public class InteractTile : Interactable
 
     public void SetFireState(bool state)
     {
-        if(state == IsBurning || type == TileType.Ash || type == TileType.Dirt) return;
+        if(state == IsBurning || type == TileType.Ash || type == TileType.Dirt || type == TileType.Water) return;
         if(state)
         {
             BurnStart = Time.time;
@@ -83,8 +83,9 @@ public class InteractTile : Interactable
         IsBurning = state;
     }
 
-    public void SetType(TileType newType)
+    public bool SetType(TileType newType)
     {
+        if(type == newType) return false;
         type = newType;
         switch(type)
         {
@@ -102,10 +103,16 @@ public class InteractTile : Interactable
                 if(Child)Destroy(Child);
                 Child = Instantiate(World.singleton.GrassModel, transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,4)*90,0), transform);
             break;
+            case TileType.Water:
+                mesh.mesh = World.singleton.WaterBlock;
+                transform.Translate(0,-0.9f,0);
+                GetComponent<BoxCollider>().center = new Vector3(0,0.9f,0);
+            break;
             default:
                 mesh.mesh = World.singleton.DirtBlock;
             break;
         }
+        return true;
     }
     
 

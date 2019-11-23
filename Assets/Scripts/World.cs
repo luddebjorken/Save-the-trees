@@ -21,6 +21,8 @@ public class World : MonoBehaviour
     public Vector2 Size;
     public int TreesToPlace;
     public int GrassToPlace;
+    public float RiverStepDistance;
+    public float RiverTurnStrength;
     public InteractTile[,] tiles;
     [Header("Fire spread settings")]
     public float TreeSpreadChance;
@@ -57,13 +59,67 @@ public class World : MonoBehaviour
             }
         }
 
+        //River water tiles
+        Vector2 currPos = Vector2.zero;
+        Vector2 direction = Vector2.zero;
+        Vector2 tangent = Vector2.zero;
+        switch(Random.Range(0,4))
+        {
+            case 0: 
+                currPos = new Vector2(Mathf.Cos(Random.Range(0,Mathf.PI/2))*(Size.x-1),0);
+                direction = new Vector2(0,1);
+                tangent = new Vector2(1,0);
+            break;
+            case 1: 
+                currPos = new Vector2(Mathf.Cos(Random.Range(0,Mathf.PI/2))*(Size.x-1),Size.y-1);
+                direction = new Vector2(0,-1);
+                tangent = new Vector2(1,0);
+            break;
+            case 2: 
+                currPos = new Vector2(0,Mathf.Cos(Random.Range(0,Mathf.PI/2))*(Size.y-1));
+                direction = new Vector2(1,0);
+                tangent = new Vector2(0,1);
+            break;
+            case 3: 
+                currPos = new Vector2(Size.x, Mathf.Cos(Random.Range(0,Mathf.PI/2))*(Size.y-1));
+                direction = new Vector2(1,0);
+                tangent = new Vector2(0,1);
+            break;
+        }
+
+        do
+        {
+            Collider[] HitColliders = Physics.OverlapSphere(new Vector3(currPos.x, 0, currPos.y),RiverStepDistance);
+            foreach(Collider HitCollider in HitColliders){
+                InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
+                if(TileComponent){
+                    if(TileComponent.SetType(TileType.Water))
+                    {
+                        if(Random.Range(0,2) == 0)
+                            TreesToPlace--;
+                        else
+                            GrassToPlace--;
+                    }
+                }
+            }
+            
+            currPos += direction * RiverStepDistance;
+            direction += tangent * Random.Range(-1.0f,1.0f) * RiverTurnStrength;
+            direction.Normalize();
+        }while(currPos.x != 0 && currPos.y != 0 && currPos.x < Size.x && currPos.y < Size.y);
+
         //Border water tiles
         for(int x = (int)(-Size.x*0.5f) - 1; x < Size.x*1.5 + 3; x++)
         {
             float test = (x<Size.x/2?(int)(Size.y)+x:(Size.y-x+Size.x/2));
             for(int y = (int)(x < Size.x/2 ? - x : -Size.y + x)-1; y < (x<Size.x/2?(int)(Size.y)+x:(Size.y-x+Size.x)) + 3; y++)
             {
-                if(x >= 0 && y >= 0 && x < Size.x && y < Size.y) continue;
+                if(x >= -2 && y >= -2 && x < Size.x + 2 && y < Size.y + 2)
+                {
+                    if(x >= 0 && y >= 0 && x < Size.x && y < Size.y) continue;
+                    Instantiate(TilePrefab, new Vector3(x,0,y), Quaternion.Euler(0,Random.Range(0,3)*90,0), WorldParent).GetComponent<InteractTile>().SetType(TileType.Water);
+                    continue;
+                }
                 Instantiate(WaterTilePrefab, new Vector3(x,-0.9f,y), Quaternion.Euler(0,Random.Range(0,3)*90,0), WorldParent);
             }
         }
