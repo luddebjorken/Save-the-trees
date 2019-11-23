@@ -5,6 +5,7 @@ using UnityEngine;
 public enum TileType
 {
     Grass,
+    Tallgrass,
     Tree,
     Ash
 }

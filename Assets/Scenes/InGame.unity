@@ -297,6 +297,7 @@ MonoBehaviour:
   RandomFireStartRadius: 2
   RandomFireStartMaxCount: 2
   TreesPlaced: []
+  TreesAmount: 0
 --- !u!4 &1063362270
 Transform:
   m_ObjectHideFlags: 0
