@@ -50,7 +50,7 @@ MonoBehaviour:
     type: 3}
   DirtBlock: {fileID: -914735228780501257, guid: 609ad2a45138dba4287f9031635ae97c,
     type: 3}
-  WaterBlock: {fileID: 2866255845738885060, guid: f858344de57255840bdb4821bbecf167,
+  WaterBlock: {fileID: -914735228780501257, guid: 609ad2a45138dba4287f9031635ae97c,
     type: 3}
   TreeModel: {fileID: -4216859302048453862, guid: b6f4ba9a7e2effc4bac0b0ec1a777750,
     type: 3}
@@ -58,14 +58,18 @@ MonoBehaviour:
     type: 3}
   GrassModel: {fileID: 4748515275550769363, guid: e68a5511fe3b97d43a6ff0dc0fbeebbe,
     type: 3}
+  FireModel: {fileID: 7907526905032882199, guid: 347d3ce0a2776c648aa845900b7a7405,
+    type: 3}
   TilePrefab: {fileID: 6973778312745794222, guid: 2fff3bd3ef7275c4d9132a183b839263,
     type: 3}
   WaterTilePrefab: {fileID: 6973778312745794222, guid: c037f7d51484ce340aa59e372f8c31e1,
     type: 3}
   WorldParent: {fileID: 0}
   Size: {x: 50, y: 50}
-  TreesToPlace: 0
+  TreesToPlace: 1000
   GrassToPlace: 1000
+  RiverStepDistance: 3
+  RiverTurnStrength: 0.2
   TreeSpreadChance: 0.006
   GrassSpreadChance: 0.008
   GrassBurnTime: 10

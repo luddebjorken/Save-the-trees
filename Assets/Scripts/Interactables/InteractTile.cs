@@ -17,9 +17,10 @@ public class InteractTile : Interactable
     public bool HasTree;
     public bool IsBurning;
     public float BurnStart;
-    public Transform Child;
     public int x,y;
     public Material Material;
+    public Transform Child;
+    private Transform Fire;
     private MeshFilter mesh;
     
     void Awake()
@@ -72,13 +73,12 @@ public class InteractTile : Interactable
         if(state)
         {
             BurnStart = Time.time;
-            Material.color = Color.red;
-            if(Child)Child.GetComponent<Renderer>().material.SetColor("Color", Color.red);
+            if(Fire)Destroy(Fire.gameObject);
+            Fire = Instantiate(World.singleton.FireModel, transform.position + new Vector3(0,1.77f,0),Quaternion.identity, transform);
         }
         else
         {
-            Material.color = Color.white;
-            if(Child)Child.GetComponent<Renderer>().material.SetColor("Color", Color.white);
+            if(Fire)Destroy(Fire.gameObject);
         }
         IsBurning = state;
     }
@@ -97,6 +97,7 @@ public class InteractTile : Interactable
             case TileType.Ash: 
                 Material.color = Color.white;
                 mesh.mesh = World.singleton.AshBlock;
+                if(Fire)Destroy(Fire.gameObject);
             break;
             case TileType.Grass:
                 mesh.mesh = World.singleton.GrassBlock;

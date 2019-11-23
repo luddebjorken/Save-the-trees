@@ -5,6 +5,7 @@ using UnityEngine;
 public class CardWave : CardBase
 {
     public float Radius;
+    public float Range;
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
@@ -32,15 +33,15 @@ public class CardWave : CardBase
     private List<InteractTile> GetTiles(InteractTile center)
     {
         List<InteractTile> ret = new List<InteractTile>();
-        bool containsWater = false;
-        Collider[] HitColliders = Physics.OverlapSphere(center.transform.position,Radius);
+        bool HasWater = false;
+        Collider[] HitColliders = Physics.OverlapCapsule(center.transform.position, center.transform.position + InteractComponent.singleton.GetDirection() * Range, Radius);
         foreach(Collider HitCollider in HitColliders){
             InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
             if(TileComponent){
-                if(TileComponent.type == TileType.Water) containsWater = true;
+                if(TileComponent.type == TileType.Water) HasWater = true;
                 ret.Add(TileComponent);
             }
         }
-        return containsWater ? ret : new List<InteractTile>();
+        return HasWater ? ret : new List<InteractTile>();
     }
 }

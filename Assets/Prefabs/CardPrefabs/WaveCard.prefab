@@ -44,6 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Price: 0
-  Radius: 5
-  EdgeRadius: 0
-  ExtinguishRange: 0
+  Radius: 8
+  Range: 8

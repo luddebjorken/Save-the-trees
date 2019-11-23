@@ -59,16 +59,16 @@ public class InteractComponent : MonoBehaviour
     {
         foreach(InteractTile tile in highlitTiles)
         {
-            tile.Material.SetColor("_Color", tile.IsBurning ? new Color(1,0,0,1) : new Color(1,1,1,1));
-            if(tile.Child)tile.Child.GetComponent<Renderer>().material.SetColor("_Color", tile.IsBurning ? new Color(1,0,0,1) : new Color(1,1,1,1));
+            tile.Material.SetColor("_Color", new Color(1,1,1,1));   
+            if(tile.Child)tile.Child.GetComponent<Renderer>().material.SetColor("_Color", new Color(1,1,1,1));
         }
 
         highlitTiles = tiles;
         
         foreach(InteractTile tile in highlitTiles)
         {
-            tile.Material.SetColor("_Color", tile.IsBurning ? FireHighlightTint : HighlightTint);
-            if(tile.Child)tile.Child.GetComponent<Renderer>().material.SetColor("_Color", tile.IsBurning ? FireHighlightTint : HighlightTint);
+            tile.Material.SetColor("_Color", HighlightTint);
+            if(tile.Child)tile.Child.GetComponent<Renderer>().material.SetColor("_Color", HighlightTint);
         }
     }
 }

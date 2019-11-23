@@ -13,6 +13,7 @@ public class World : MonoBehaviour
     public Transform TreeModel;
     public Transform HouseModel;
     public Transform GrassModel;
+    public Transform FireModel;
     [Header("Tile reference")]
     public Transform TilePrefab;
     public Transform WaterTilePrefab;
