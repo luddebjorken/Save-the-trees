@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4907440377291614850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4907440377291614848}
+  - component: {fileID: 4907440377291614851}
+  m_Layer: 0
+  m_Name: Singleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4907440377291614848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907440377291614850}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4907440377291614851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907440377291614850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fc79e6f16caae4c87fa489bfde7602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AshBlock: {fileID: 6289545138269723696, guid: 0fa86ae8da646644aa6679cafe0e9270,
+    type: 3}
+  GrassBlock: {fileID: 420634776737977212, guid: 0405395ddd19f8e43b0e7ba0e570213a,
+    type: 3}
+  DirtBlock: {fileID: -914735228780501257, guid: 609ad2a45138dba4287f9031635ae97c,
+    type: 3}
+  WaterBlock: {fileID: 2866255845738885060, guid: f858344de57255840bdb4821bbecf167,
+    type: 3}
+  TreeModel: {fileID: -4216859302048453862, guid: b6f4ba9a7e2effc4bac0b0ec1a777750,
+    type: 3}
+  HouseModel: {fileID: -4216859302048453862, guid: f72e293f809b84743a17961674ffb6bb,
+    type: 3}
+  TilePrefab: {fileID: 6973778312745794222, guid: 2fff3bd3ef7275c4d9132a183b839263,
+    type: 3}
+  WaterTilePrefab: {fileID: 6973778312745794222, guid: c037f7d51484ce340aa59e372f8c31e1,
+    type: 3}
+  WorldParent: {fileID: 0}
+  Size: {x: 50, y: 50}
+  TreesToPlace: 400
+  TreeSpreadChance: 0.006
+  GrassSpreadChance: 0.008
+  GrassBurnTime: 10
+  TreeBurnTime: 15
+  RandomFireStartChance: 0.003
+  RandomFireStartRadius: 2
+  RandomFireStartMaxCount: 2
+  TreesPlaced: []
+  TreesAmount: 0
