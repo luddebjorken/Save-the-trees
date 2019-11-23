@@ -5,6 +5,7 @@ using UnityEngine;
 public enum TileType
 {
     Grass,
+    Tallgrass,
     Tree,
     Ash
 }
@@ -74,7 +75,7 @@ public class InteractTile : Interactable
         }
         else
         {
-            Material.color = Color.green;
+            Material.color = Color.white;
         }
         IsBurning = state;
     }
@@ -90,6 +91,7 @@ public class InteractTile : Interactable
                 Child = Instantiate(World.singleton.TreeModel, transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,360),0), transform);
             break;// new Color(23, 135, 30); break;
             case TileType.Ash: 
+                Material.color = Color.white;
                 mesh.mesh = World.singleton.AshBlock;
             break;
             default:
