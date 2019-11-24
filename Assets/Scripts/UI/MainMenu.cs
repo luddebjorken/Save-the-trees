@@ -31,7 +31,15 @@ public class MainMenu : MonoBehaviour
     public void BTNCredits()
     {
         if(isTransitioning) return;
-        StartCoroutine(Transition(Credits,new Vector3(-2560,0,0), Vector3.zero, 1));
+        StartCoroutine(Transition(Credits,new Vector3(-2560,0,0), Vector3.zero, 0.7f));
+        StartCoroutine(Transition(Menu,Vector3.zero, new Vector3(2560,0,0), 0.7f));
+    }
+    
+    public void BTNReturnCredits()
+    {
+        if(isTransitioning) return;
+        StartCoroutine(Transition(Credits, Vector3.zero,new Vector3(-2560,0,0), 0.7f));
+        StartCoroutine(Transition(Menu, new Vector3(2560,0,0),Vector3.zero, 0.7f));
     }
 
     IEnumerator Transition(RectTransform obj,Vector3 p1, Vector3 p2, float time)
@@ -40,7 +48,7 @@ public class MainMenu : MonoBehaviour
         float startTime = Time.time;
         while(Time.time - startTime < time)
         {
-            obj.position = Vector3.Lerp(p1,p2,(Time.time- startTime)/time);
+            obj.localPosition = Vector3.Lerp(p1,p2,(Time.time- startTime)/time);
             yield return 0;
         }
         isTransitioning = false;
