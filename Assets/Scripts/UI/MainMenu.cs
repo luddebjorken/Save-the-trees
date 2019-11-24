@@ -9,7 +9,6 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("InGame");
     }
-
     public void BTNExit()
     {
         Application.Quit();

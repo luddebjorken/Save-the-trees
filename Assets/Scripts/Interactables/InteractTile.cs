@@ -8,7 +8,8 @@ public enum TileType
     Dirt,
     Tree,
     Ash,
-    Water
+    Water,
+    House
 }
 
 public class InteractTile : Interactable
@@ -48,7 +49,7 @@ public class InteractTile : Interactable
                 }
                 SetType(TileType.Ash);
             }
-            else if(Random.Range(0.0f,1.0f) < (type == TileType.Tree?World.singleton.TreeSpreadChance : type == TileType.Grass ? World.singleton.GrassSpreadChance : 0))
+            else if(Random.Range(0.0f,1.0f) < (type == TileType.Grass ? World.singleton.GrassSpreadChance : World.singleton.TreeSpreadChance))
             {
                 if(type == TileType.Ash)
                 {
@@ -60,11 +61,6 @@ public class InteractTile : Interactable
         }
     }
 
-
-    public override void OnInteractStart()
-    {
-        SetFireState(true);
-    }
 
     public void SetFireState(bool state)
     {

@@ -180,6 +180,7 @@ public class World : MonoBehaviour
             if(tile && tile.type == TileType.Dirt)
             {
                 tile.Child = Instantiate(HouseModel, tile.transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,4)*90,0));
+                tile.type = TileType.House;
                 HousesPlaced++;
             }
         }

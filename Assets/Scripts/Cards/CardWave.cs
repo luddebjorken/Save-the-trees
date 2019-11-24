@@ -4,6 +4,33 @@ using UnityEngine;
 
 public class CardWave : CardBase
 {
+    private class WaveFrame
+    {
+        List<Transform> blocks;
+        public WaveFrame(Vector2 center, int radius)
+        {
+            int r2 = radius * radius;
+            for(int x = -(int)radius; x <= radius; x++)
+            {
+                int y = (int)(Mathf.Sqrt(r2 - x*x) + 0.5f);
+                Transform A = World.singleton.GetTile(center + new Vector2(x,y))?.transform;
+                Transform B = World.singleton.GetTile(center + new Vector2(x,-y))?.transform;
+                if(A)blocks.Add(A);
+                if(B)blocks.Add(B);
+            }
+
+            IEnumerator FadeRoutine()
+            {
+                float start = Time.time;
+                while(Time.time - start < 1)
+                {
+                    //foreach(Transform transform in )
+                    yield return 0;
+                }
+            }
+        }
+    }
+
     public float Radius;
     public float Range;
     private List<InteractTile> selectedTiles;
