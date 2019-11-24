@@ -15,6 +15,8 @@ public class World : MonoBehaviour
     public Transform HouseModel;
     public Transform GrassModel;
     public Transform FireModel;
+    public Transform LightningModel;
+    public Transform RainModel;
     public Transform WindModel;
     [Header("Tile reference")]
     public Transform TilePrefab;

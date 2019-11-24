@@ -966,22 +966,20 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1675761655}
-    - target: {fileID: 7393492840712184276, guid: 10417440c2048ef4ba1f162f3443a0e5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50.000244
-      objectReference: {fileID: 0}
-    - target: {fileID: 7205490598142119613, guid: 10417440c2048ef4ba1f162f3443a0e5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 677995140, guid: 10417440c2048ef4ba1f162f3443a0e5, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10417440c2048ef4ba1f162f3443a0e5, type: 3}
+--- !u!114 &2051096903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2051096903, guid: 10417440c2048ef4ba1f162f3443a0e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1986649570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2496787254701051505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1054,6 +1052,11 @@ PrefabInstance:
       propertyPath: FlashImage
       value: 
       objectReference: {fileID: 677995140}
+    - target: {fileID: 2496787256169028436, guid: f84fe1e77dc30f9499f1abb13f45efe5,
+        type: 3}
+      propertyPath: RainImage
+      value: 
+      objectReference: {fileID: 2051096903}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f84fe1e77dc30f9499f1abb13f45efe5, type: 3}
 --- !u!1001 &4907440376329122910
@@ -1130,15 +1133,9 @@ PrefabInstance:
       objectReference: {fileID: 395458091}
     - target: {fileID: 4907440377291614851, guid: 2d25358525d6bbe4dbef8eeb6b5addc6,
         type: 3}
-      propertyPath: WindModel
+      propertyPath: RainModel
       value: 
-      objectReference: {fileID: 7341174445942785766, guid: 4d918326ed2e1924baaf1f23cd2e238d,
-        type: 3}
-    - target: {fileID: 4907440377291614851, guid: 2d25358525d6bbe4dbef8eeb6b5addc6,
-        type: 3}
-      propertyPath: StumpModel
-      value: 
-      objectReference: {fileID: -4216859302048453862, guid: 6580f292a44724d46ae138dce3bd48b3,
+      objectReference: {fileID: 5821503795114998570, guid: 1b296b04f412a7d4a95d0a6bbdc1ba31,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d25358525d6bbe4dbef8eeb6b5addc6, type: 3}

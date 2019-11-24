@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCard: {fileID: 0}
+  FlashImage: {fileID: 0}
+  RainImage: {fileID: 0}
   direction: 0
   HighlightTint: {r: 0, g: 1, b: 0.9419038, a: 1}
   FireHighlightTint: {r: 1, g: 0.71083266, b: 0.18396229, a: 1}

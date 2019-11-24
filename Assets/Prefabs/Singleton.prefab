@@ -54,11 +54,19 @@ MonoBehaviour:
     type: 3}
   TreeModel: {fileID: -4216859302048453862, guid: b6f4ba9a7e2effc4bac0b0ec1a777750,
     type: 3}
+  StumpModel: {fileID: -4216859302048453862, guid: 6580f292a44724d46ae138dce3bd48b3,
+    type: 3}
   HouseModel: {fileID: -4216859302048453862, guid: f72e293f809b84743a17961674ffb6bb,
     type: 3}
   GrassModel: {fileID: 4748515275550769363, guid: e68a5511fe3b97d43a6ff0dc0fbeebbe,
     type: 3}
   FireModel: {fileID: 7907526905032882199, guid: 347d3ce0a2776c648aa845900b7a7405,
+    type: 3}
+  LightningModel: {fileID: 2081684018970016694, guid: 277edb9928bcb29489a131e2676dd408,
+    type: 3}
+  RainModel: {fileID: 5821503795114998570, guid: 1b296b04f412a7d4a95d0a6bbdc1ba31,
+    type: 3}
+  WindModel: {fileID: 7341174445942785766, guid: 4d918326ed2e1924baaf1f23cd2e238d,
     type: 3}
   TilePrefab: {fileID: 6973778312745794222, guid: 2fff3bd3ef7275c4d9132a183b839263,
     type: 3}
@@ -79,6 +87,7 @@ MonoBehaviour:
   RandomFireStartMaxCount: 2
   TreesPlaced: []
   TreesAmount: 0
+  FireCount: 0
 --- !u!114 &238572740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,3 +101,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathTime: 3
+  HPBar: {fileID: 0}

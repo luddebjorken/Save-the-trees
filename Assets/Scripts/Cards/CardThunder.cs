@@ -11,6 +11,7 @@ public class CardThunder : CardBase
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
+        InteractComponent.singleton.RainFade();
         if(selectedTiles == null) Debug.LogError("NO TILES WERE FOUND!");
         foreach(InteractTile selectedTile in selectedTiles)
         {
@@ -18,9 +19,11 @@ public class CardThunder : CardBase
         }
         if(Random.Range(0.0f,1.0f) < LightningstrikeChance)
         {
+            InteractComponent.singleton.ThunderFade();
             SoundHandler.singleton.CardSource.PlayOneShot(LightningClip[Random.Range(0,LightningClip.Length)]);
-            StartCoroutine("FlashRoutine");
-            Collider[] HitColliders = Physics.OverlapSphere(selectedTiles[Random.Range(0,selectedTiles.Count)].transform.position, Random.Range(0.0f,LightningStrikeRadius), 1 << 8);
+            InteractTile lightningTile = selectedTiles[Random.Range(0,selectedTiles.Count)];
+            Destroy(Instantiate(World.singleton.LightningModel, lightningTile.transform.position + new Vector3(0,1f,0),Quaternion.Euler(0,45,0)).gameObject,1);
+            Collider[] HitColliders = Physics.OverlapSphere(lightningTile.transform.position, Random.Range(0.0f,LightningStrikeRadius), 1 << 8);
             foreach(Collider HitCollider in HitColliders)
             {
                 InteractTile hitTile = HitCollider.GetComponent<InteractTile>();
@@ -32,6 +35,9 @@ public class CardThunder : CardBase
         }
         else
         {
+            GameObject rain = Instantiate(World.singleton.RainModel, tile.transform.position + new Vector3(0,1f,0),Quaternion.Euler(0,45,0)).gameObject;
+            rain.transform.localScale *= 1.2f;
+            Destroy(rain,1);
             SoundHandler.singleton.CardSource.PlayOneShot(UseSound[Random.Range(0,UseSound.Length)]);
         }
     }
@@ -64,14 +70,4 @@ public class CardThunder : CardBase
         return ret;
     }
 
-    IEnumerator FlashRoutine()
-    {
-        float startTime = Time.time;
-        while(Time.time - startTime< 0.3f)
-        {
-            InteractComponent.singleton.FlashImage.color = Color.Lerp(Color.white, new Color(1,1,1,0), (Time.time - startTime)/0.3f);
-            yield return 0;
-
-        }
-    }
 }

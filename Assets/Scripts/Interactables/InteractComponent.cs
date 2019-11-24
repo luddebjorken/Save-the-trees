@@ -8,10 +8,13 @@ public class InteractComponent : MonoBehaviour
     // Start is called before the first frame update
     public CardBase currentCard;
     public Image FlashImage;
+    public Image RainImage;
     public int direction;
     List<InteractTile> highlitTiles;
     public static InteractComponent singleton;
     public Color HighlightTint, FireHighlightTint;
+    private Coroutine RainFadeRoutine;
+    private Coroutine LightningRoutine;
     void Start()
     {
         singleton = this;
@@ -79,6 +82,52 @@ public class InteractComponent : MonoBehaviour
         {
             tile.Material.SetColor("_Color", HighlightTint);
             if(tile.Child)tile.Child.GetComponent<Renderer>().material.SetColor("_Color", HighlightTint);
+        }
+    }
+
+    public void RainFade()
+    {
+        if(RainFadeRoutine != null) StopCoroutine(RainFadeRoutine);
+        RainFadeRoutine = StartCoroutine("RainRoutine");
+    }
+    public void ThunderFade()
+    {
+        if(LightningRoutine != null) StopCoroutine(LightningRoutine);
+        LightningRoutine = StartCoroutine("FlashRoutine");
+    }
+
+    IEnumerator RainRoutine()
+    {
+        float startTime = Time.time;
+        Color startColor = RainImage.color;
+        while(Time.time - startTime< 0.5f)
+        {
+            RainImage.color = Color.Lerp(startColor,new Color(0.07008722f,0.1733249f,0.2358491f,0.3f), (Time.time - startTime)/0.5f);
+            yield return 0;
+
+        }
+        startTime = Time.time;
+        while(Time.time - startTime < 0.5f)
+        {
+            yield return 0;
+        }
+        startTime = Time.time;
+        while(Time.time - startTime < 2f)
+        {
+            RainImage.color = Color.Lerp(new Color(0.07008722f,0.1733249f,0.2358491f,0.3f), new Color(0.07008722f,0.1733249f,0.2358491f,0), (Time.time - startTime)/2);
+            yield return 0;
+
+        }
+    }
+    
+    IEnumerator FlashRoutine()
+    {
+        float startTime = Time.time;
+        while(Time.time - startTime< 0.3f)
+        {
+            FlashImage.color = Color.Lerp(Color.white, new Color(1,1,1,0), (Time.time - startTime)/0.3f);
+            yield return 0;
+
         }
     }
 }
