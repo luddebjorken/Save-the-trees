@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8d610b02813264f960caa1397f3431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  URL: https://www.linkedin.com/in/ludvig-bj%C3%B6rk-f%C3%B6rare-02ba0a149/
+  URL: 
 --- !u!114 &7338791447079090683
 MonoBehaviour:
   m_ObjectHideFlags: 0

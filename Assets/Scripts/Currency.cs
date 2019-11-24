@@ -53,7 +53,7 @@ public class Currency : MonoBehaviour
 
     public bool CanAfford(int ammount)
     {
-        if(CurrentCurrency - ammount > 0)
+        if(CurrentCurrency - ammount >= 0)
         {
             return true;
         }
@@ -65,7 +65,7 @@ public class Currency : MonoBehaviour
 
     public bool Pay(int ammount)
     {
-        if(CurrentCurrency - ammount > 0)
+        if(CurrentCurrency - ammount >= 0)
         {
             CurrentCurrency -= ammount;
             return true;

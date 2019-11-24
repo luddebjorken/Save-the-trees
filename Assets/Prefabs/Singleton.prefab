@@ -81,11 +81,11 @@ MonoBehaviour:
   GrassToPlace: 1000
   RiverStepDistance: 3
   RiverTurnStrength: 0.2
-  TreeSpreadChance: 0.006
-  GrassSpreadChance: 0.008
-  GrassBurnTime: 10
-  TreeBurnTime: 15
-  RandomFireStartChance: 0.003
+  TreeSpreadChance: 0.0015
+  GrassSpreadChance: 0.0005
+  GrassBurnTime: 20
+  TreeBurnTime: 25
+  RandomFireStartChance: 0.002
   RandomFireStartRadius: 2
   RandomFireStartMaxCount: 2
   TreesPlaced: []
@@ -109,6 +109,7 @@ MonoBehaviour:
   TimerText: {fileID: 0}
   time: 0
   TreeThreshold: 20
+  FiresPerMinute: 3
 --- !u!114 &740094633
 MonoBehaviour:
   m_ObjectHideFlags: 0

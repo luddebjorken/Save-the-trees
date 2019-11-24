@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public RectTransform Menu;
     public RectTransform Credits;
+    public RectTransform Info;
     bool isTransitioning = false;
     public void BTNStart()
     {
@@ -42,13 +43,18 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(Transition(Menu, new Vector3(2560,0,0),Vector3.zero, 0.7f));
     }
 
+    public void ToggleInfo(bool state)
+    {
+        Info.gameObject.SetActive(state);
+    }
+
     IEnumerator Transition(RectTransform obj,Vector3 p1, Vector3 p2, float time)
     {
         isTransitioning = true;
         float startTime = Time.time;
         while(Time.time - startTime < time)
         {
-            obj.localPosition = Vector3.Lerp(p1,p2,(Time.time- startTime)/time);
+            obj.localPosition = Vector3.Lerp(p1,p2,Mathf.Sin(0.5f * Mathf.PI * (Time.time- startTime)/time));
             yield return 0;
         }
         isTransitioning = false;

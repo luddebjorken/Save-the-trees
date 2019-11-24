@@ -44,6 +44,23 @@ public class GameFlow : MonoBehaviour
             //StartCoroutine("ResetTimer");
         }
 
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+            World.singleton.TreeBurnTime = 3;
+            World.singleton.TreeSpreadChance = 1;
+            World.singleton.GrassBurnTime = 3;
+            World.singleton.GrassSpreadChance = 1;
+        }
+
+        if(Input.GetButtonDown("Cancel"))
+        {
+            ReturnToMenu();
+        }
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
     IEnumerator ResetTimer()
