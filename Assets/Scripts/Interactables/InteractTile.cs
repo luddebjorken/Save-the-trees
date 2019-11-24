@@ -97,7 +97,7 @@ public class InteractTile : Interactable
             case TileType.Grass:
                 mesh.mesh = World.singleton.GrassBlock;
                 if(Child)Destroy(Child);
-                Child = Instantiate(World.singleton.GrassModel, transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,4)*90,0), transform);
+                Child = Instantiate(World.singleton.GrassModel, transform.position + new Vector3(0,0.5f,0), Quaternion.Euler(0,Random.Range(0,360),0), transform);
             break;
             case TileType.Water:
                 mesh.mesh = World.singleton.WaterBlock;

@@ -13,6 +13,7 @@ public class GameFlow : MonoBehaviour
     public Text TimerText;
     public float time;
     public int TreeThreshold;
+    public float FiresPerMinute;
     void Awake()
     {
         singleton = this;
@@ -25,6 +26,7 @@ public class GameFlow : MonoBehaviour
 
     void Update()
     {
+        World.singleton.RandomFireStartMaxCount = (int)(2+FiresPerMinute*time/60);
         int minutes = (int)Mathf.Floor(time / 60);
         int seconds = (int)Mathf.RoundToInt(time%60);
         
