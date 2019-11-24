@@ -1134,5 +1134,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7341174445942785766, guid: 4d918326ed2e1924baaf1f23cd2e238d,
         type: 3}
+    - target: {fileID: 4907440377291614851, guid: 2d25358525d6bbe4dbef8eeb6b5addc6,
+        type: 3}
+      propertyPath: StumpModel
+      value: 
+      objectReference: {fileID: -4216859302048453862, guid: 6580f292a44724d46ae138dce3bd48b3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d25358525d6bbe4dbef8eeb6b5addc6, type: 3}

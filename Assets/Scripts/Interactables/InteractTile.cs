@@ -38,7 +38,9 @@ public class InteractTile : Interactable
                 IsBurning = false;
                 if(type == TileType.Tree){
                     World.singleton.TreesAmount--;
-                    //SET DEAD TREE MODEL
+                    Quaternion rotation = Child.rotation;
+                    if(Child)Destroy(Child.gameObject);
+                    Child = Instantiate(World.singleton.StumpModel, transform.position + new Vector3(0,0.5f,0), rotation, transform);
                 }
                 else if(type == TileType.Grass)
                 {

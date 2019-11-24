@@ -11,6 +11,7 @@ public class World : MonoBehaviour
     public Mesh WaterBlock;
     [Header("Props")]
     public Transform TreeModel;
+    public Transform StumpModel;
     public Transform HouseModel;
     public Transform GrassModel;
     public Transform FireModel;
