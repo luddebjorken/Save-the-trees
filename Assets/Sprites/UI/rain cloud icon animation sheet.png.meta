@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 9a4cce5d5f7b31e4dbff92f3e7cfac48
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1825763637421827712
+    second: rain cloud icon animation sheet_0
+  - first:
+      213: 622691068661154461
+    second: rain cloud icon animation sheet_1
+  - first:
+      213: 1659680332521113236
+    second: rain cloud icon animation sheet_2
+  - first:
+      213: 6984220671080080995
+    second: rain cloud icon animation sheet_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,7 +96,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: rain cloud icon animation sheet_0
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 0
+        width: 1394
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933515c89a9322c47987c07a873b04b1
+      internalID: 1825763637421827712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rain cloud icon animation sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 1394
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37dd15bb00873284399b9e12940a1ac5
+      internalID: 622691068661154461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rain cloud icon animation sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 0
+        width: 1394.5
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6cb19ddb22d2747a392fce99b6dd12
+      internalID: 1659680332521113236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rain cloud icon animation sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4682
+        y: 0
+        width: 1394.5
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e423bc1131b540a4db9c6592bc57eb87
+      internalID: 6984220671080080995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

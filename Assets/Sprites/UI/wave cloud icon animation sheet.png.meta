@@ -1,22 +1,28 @@
 fileFormatVersion: 2
-guid: fcd04378f7c3bf4449d9c4af67ca806e
+guid: 302985b63f2811043bde3e7eb9d4a494
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2305545234675816646
-    second: thunder cloud icon animation sheet_0
+      213: 8776469912022497756
+    second: wave cloud icon animation sheet_0
   - first:
-      213: 6604147470452809811
-    second: thunder cloud icon animation sheet_1
+      213: 1892153239796813013
+    second: wave cloud icon animation sheet_1
   - first:
-      213: -7200834809615267647
-    second: thunder cloud icon animation sheet_2
+      213: -7636619925911210557
+    second: wave cloud icon animation sheet_2
   - first:
-      213: 4661665040594556008
-    second: thunder cloud icon animation sheet_3
+      213: -1717662329738638625
+    second: wave cloud icon animation sheet_3
   - first:
-      213: 5011617678124502602
-    second: thunder cloud icon animation sheet_4
+      213: -5046557893078494491
+    second: wave cloud icon animation sheet_4
+  - first:
+      213: 1646621897549920173
+    second: wave cloud icon animation sheet_5
+  - first:
+      213: -2054866026323418981
+    second: wave cloud icon animation sheet_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -101,106 +107,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: thunder cloud icon animation sheet_0
+      name: wave cloud icon animation sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 547
         y: 0
-        width: 1204.8
+        width: 1271
         height: 1315
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e34fde9b891ff24aad72133228acaf0
-      internalID: 2305545234675816646
+      spriteID: 2f7b77d6f8f35b4459e5cd06de50a20c
+      internalID: 8776469912022497756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thunder cloud icon animation sheet_1
+      name: wave cloud icon animation sheet_1
       rect:
         serializedVersion: 2
-        x: 1204
+        x: 1905
         y: 0
-        width: 1205
+        width: 1271
         height: 1315
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d09c6dc5e20f8c4d8580f12a82123c7
-      internalID: 6604147470452809811
+      spriteID: 5afebfe3ab20ecc4d90d4e000d383bbb
+      internalID: 1892153239796813013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thunder cloud icon animation sheet_2
+      name: wave cloud icon animation sheet_2
       rect:
         serializedVersion: 2
-        x: 2408
+        x: 3428
         y: 0
-        width: 1204.8
+        width: 1271
         height: 1315
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae1207e33ebee1849b7816fac8ee58f5
-      internalID: -7200834809615267647
+      spriteID: 4aa8095592ec71e47b3b32a1c4ed4bc0
+      internalID: -7636619925911210557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thunder cloud icon animation sheet_3
+      name: wave cloud icon animation sheet_3
       rect:
         serializedVersion: 2
-        x: 3612
+        x: 4837
         y: 0
-        width: 1204.8
+        width: 1271
         height: 1315
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6409d6431800e464da4411dd234f7c7f
-      internalID: 4661665040594556008
+      spriteID: bd3cb8d148bb49c42bc8ad059b716c33
+      internalID: -1717662329738638625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thunder cloud icon animation sheet_4
+      name: wave cloud icon animation sheet_4
       rect:
         serializedVersion: 2
-        x: 4816
+        x: 6372
         y: 0
-        width: 1204.8
+        width: 1271
         height: 1315
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 759b748aae35bd74e9d905d832381b8b
-      internalID: 5011617678124502602
+      spriteID: 3bec2f4476902bc4db3b1b770ae9c1d8
+      internalID: -5046557893078494491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave cloud icon animation sheet_6
+      rect:
+        serializedVersion: 2
+        x: 7961
+        y: 0
+        width: 1271
+        height: 1315
+      alignment: 9
+      pivot: {x: 0.25154728, y: 0.49039558}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc2702b5af06f2418c2d28f6c5dc1f1
+      internalID: -2054866026323418981
       vertices: []
       indices: 
       edges: []
