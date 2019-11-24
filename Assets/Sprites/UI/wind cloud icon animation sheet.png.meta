@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 9e72a57debdde6240a07dc0693f8138c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8991635025326241299
+    second: wind cloud icon animation sheet_0
+  - first:
+      213: -462849974055502583
+    second: wind cloud icon animation sheet_1
+  - first:
+      213: -3649865175988705742
+    second: wind cloud icon animation sheet_2
+  - first:
+      213: -2598644260932710285
+    second: wind cloud icon animation sheet_3
+  - first:
+      213: -5168201998016926764
+    second: wind cloud icon animation sheet_4
+  - first:
+      213: 6253668500636377131
+    second: wind cloud icon animation sheet_5
+  - first:
+      213: 1645949264074445606
+    second: wind cloud icon animation sheet_6
+  - first:
+      213: -240374924529815064
+    second: wind cloud icon animation sheet_7
+  - first:
+      213: 4088152714000841924
+    second: wind cloud icon animation sheet_8
+  - first:
+      213: -9040339690817735356
+    second: wind cloud icon animation sheet_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +70,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,7 +114,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_0
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed92ee422585cd343a9b3b70a287f09a
+      internalID: 8991635025326241299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4be5b7825cd6344893e5e35d2a4ed1
+      internalID: -462849974055502583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a322ded98a65f6e41b64b4c8bdf4d119
+      internalID: -3649865175988705742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4383
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37baef33dfe9534984b445406b566f6
+      internalID: -2598644260932710285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_4
+      rect:
+        serializedVersion: 2
+        x: 5558
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3de1b96a84cb040bfb893be0c3d115
+      internalID: -5168201998016926764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_5
+      rect:
+        serializedVersion: 2
+        x: 6770
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d504ef4fd07a16f4b8ca46659b568f78
+      internalID: 6253668500636377131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_6
+      rect:
+        serializedVersion: 2
+        x: 7922
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2447206727ef2ea43ac946b184d3c77b
+      internalID: 1645949264074445606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_7
+      rect:
+        serializedVersion: 2
+        x: 9141
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ea63ca62119604dba40baabbad0e02
+      internalID: -240374924529815064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_8
+      rect:
+        serializedVersion: 2
+        x: 10323
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8167313a94abf34394604083c55ddff
+      internalID: 4088152714000841924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind cloud icon animation sheet_9
+      rect:
+        serializedVersion: 2
+        x: 11579
+        y: 0
+        width: 1241
+        height: 1315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96231b6051350564fb060758101e89b6
+      internalID: -9040339690817735356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
