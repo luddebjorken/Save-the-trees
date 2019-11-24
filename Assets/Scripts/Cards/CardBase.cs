@@ -16,6 +16,7 @@ public class CardBase : MonoBehaviour
     void Awake()
     {
         graphic = GetComponent<Image>();
+        GetComponentInChildren<Text>().text = Price.ToString();
     }
 
     void Update()
