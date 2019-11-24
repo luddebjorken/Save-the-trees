@@ -1,0 +1,631 @@
+fileFormatVersion: 2
+guid: da5ae47a47f256a4e8e48aa5347d77f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7663294534936921230
+    second: Tsunami sprite_0
+  - first:
+      213: 510575100239709184
+    second: Tsunami sprite_1
+  - first:
+      213: -1318063759889885749
+    second: Tsunami sprite_2
+  - first:
+      213: -1027416502022867758
+    second: Tsunami sprite_3
+  - first:
+      213: -6269605818860816479
+    second: Tsunami sprite_4
+  - first:
+      213: -8440801429434276688
+    second: Tsunami sprite_5
+  - first:
+      213: 2460322746497774718
+    second: Tsunami sprite_6
+  - first:
+      213: -1301962914056837526
+    second: Tsunami sprite_7
+  - first:
+      213: 1783098000603291686
+    second: Tsunami sprite_8
+  - first:
+      213: 743081199219201501
+    second: Tsunami sprite_9
+  - first:
+      213: 7183338092864544647
+    second: Tsunami sprite_10
+  - first:
+      213: -593746613689900652
+    second: Tsunami sprite_11
+  - first:
+      213: 3812617804251286361
+    second: Tsunami sprite_12
+  - first:
+      213: 4357552637091695541
+    second: Tsunami sprite_13
+  - first:
+      213: -6789158006432020375
+    second: Tsunami sprite_14
+  - first:
+      213: 2006677622129267207
+    second: Tsunami sprite_15
+  - first:
+      213: -3219567666731190009
+    second: Tsunami sprite_16
+  - first:
+      213: -671146503946466301
+    second: Tsunami sprite_17
+  - first:
+      213: -3132190871746841493
+    second: Tsunami sprite_18
+  - first:
+      213: 7579569615060244824
+    second: Tsunami sprite_19
+  - first:
+      213: 6490581933721616076
+    second: Tsunami sprite_20
+  - first:
+      213: 3887852049951946012
+    second: Tsunami sprite_21
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tsunami sprite_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2822
+        width: 246
+        height: 143
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885c23a481852794e9ad3fbce7407237
+      internalID: -7663294534936921230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2564
+        width: 256
+        height: 141
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439d002b62c260741b0195e7fd8a6d2b
+      internalID: 510575100239709184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2309
+        width: 256
+        height: 143
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc61c45557faa244f84d99d1d103d90c
+      internalID: -1318063759889885749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2302
+        width: 24
+        height: 14
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4ffa76397aac54382f83e9289829e8
+      internalID: -1027416502022867758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2053
+        width: 250
+        height: 151
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3452411823ba6a46ace2a6c191d3af6
+      internalID: -6269605818860816479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_5
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 2194
+        width: 12
+        height: 12
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0c830547ca3594c9e75f6754ee890f
+      internalID: -8440801429434276688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_6
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1942
+        width: 24
+        height: 10
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c68addf8f5257048b58fba2f8368807
+      internalID: 2460322746497774718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1796
+        width: 246
+        height: 138
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0975e152ed858d4db1196bc44f43335
+      internalID: -1301962914056837526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_8
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1915
+        width: 35
+        height: 25
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47809d11b5392a4cb80fbd697be5c78
+      internalID: 1783098000603291686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1540
+        width: 256
+        height: 144
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3ebe0d2fd8e484d9e240f70cccb308
+      internalID: 743081199219201501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_10
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1430
+        width: 24
+        height: 21
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edabb39f42ca9f54880501fd4408e3e7
+      internalID: 7183338092864544647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1286
+        width: 246
+        height: 143
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ae1b03ca5f4e945a9373a50107a5d6
+      internalID: -593746613689900652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_12
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1189
+        width: 37
+        height: 10
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7724036733480e84494c68506e49399b
+      internalID: 3812617804251286361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1028
+        width: 256
+        height: 143
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f7f709cc232fc4f98ff404da747c2a
+      internalID: 4357552637091695541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 773
+        width: 256
+        height: 143
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f1bc3d92346c540a8dcd567df70c2b
+      internalID: -6789158006432020375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_15
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 767
+        width: 25
+        height: 13
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a716de938e6b16043aeab038362a9bc9
+      internalID: 2006677622129267207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 517
+        width: 250
+        height: 151
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781f86499471cdc4dbb9d5d7957f788d
+      internalID: -3219567666731190009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_17
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 658
+        width: 12
+        height: 12
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd43ff2c5657b454e9ade35f4f17745d
+      internalID: -671146503946466301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_18
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 406
+        width: 24
+        height: 10
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef6a212097baa04ab89b3d43fd8aa82
+      internalID: -3132190871746841493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_19
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 260
+        width: 246
+        height: 138
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5158795f700a2ff4db5dc5f070e410f2
+      internalID: 7579569615060244824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_20
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 379
+        width: 35
+        height: 25
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00138bd71aefae64ebc2d195a77a82a0
+      internalID: 6490581933721616076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tsunami sprite_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 256
+        height: 144
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382a9bec35154fe45afdb920d163da15
+      internalID: 3887852049951946012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 218c4b8cb20163d40a57ea5ed17b94ec
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

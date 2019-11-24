@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fa98dcfbae3225a41a7b9a1fb0e6a42c
+guid: de35b010885aa604dad82c8dad9a8c6a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -38,6 +38,12 @@ TextureImporter:
   - first:
       213: 1762809247917416155
     second: Lightning sprite_11
+  - first:
+      213: 3580548205963796792
+    second: Lightning sprite_12
+  - first:
+      213: 4749335404066646785
+    second: Lightning sprite_13
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -81,7 +87,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +102,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -108,7 +114,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -127,8 +133,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4958faff18c723489a33e39c6e49d76
+      spriteID: 7307835e116e2f845829b4e3b4820068
       internalID: 6179685932620182184
       vertices: []
       indices: 
@@ -146,10 +152,10 @@ TextureImporter:
       name: Lightning sprite_1
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 256
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,7 +163,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c490c5cccd26f34f829b01a0187ad48
+      spriteID: 8b9d4bdda8e10fa46951cfcdf43ef27a
       internalID: -1146972698216757149
       vertices: []
       indices: 
@@ -167,10 +173,10 @@ TextureImporter:
       name: Lightning sprite_2
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 512
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,7 +184,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d03549d8f40938148a183f14634dad8c
+      spriteID: aaab5bbfe1fec834ca41201b0142a9a3
       internalID: 1337008545702066957
       vertices: []
       indices: 
@@ -188,10 +194,10 @@ TextureImporter:
       name: Lightning sprite_3
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 768
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,7 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afc3e150b43c09746acd03790324d220
+      spriteID: 9dc3a35ee748acd4f8553e250cb46614
       internalID: 8780405111033509407
       vertices: []
       indices: 
@@ -209,10 +215,10 @@ TextureImporter:
       name: Lightning sprite_4
       rect:
         serializedVersion: 2
-        x: 4096
+        x: 1024
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,7 +226,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0be973eae0eec7143bfe15a1edd07261
+      spriteID: 439f6af37f792654480c9282b834fb88
       internalID: 2229556781868380344
       vertices: []
       indices: 
@@ -230,10 +236,10 @@ TextureImporter:
       name: Lightning sprite_5
       rect:
         serializedVersion: 2
-        x: 5120
+        x: 1280
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,7 +247,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09901f88242f4894b8a25862a9433526
+      spriteID: 40f8f9a2fc1765c419ca8eb509ee7363
       internalID: 4474724196795184588
       vertices: []
       indices: 
@@ -251,10 +257,10 @@ TextureImporter:
       name: Lightning sprite_6
       rect:
         serializedVersion: 2
-        x: 6144
+        x: 1536
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,7 +268,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5b757b018e34a045b0f94a8db0f3287
+      spriteID: 5d12c3dc55d3db8489edbbeec65f2116
       internalID: 3437382170575143018
       vertices: []
       indices: 
@@ -272,10 +278,10 @@ TextureImporter:
       name: Lightning sprite_7
       rect:
         serializedVersion: 2
-        x: 7168
+        x: 1792
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,7 +289,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 599792fdedd767f458cc16d5355afa9d
+      spriteID: 698c4f2df851ac343bf68e19d6f32a53
       internalID: -5223636077310242334
       vertices: []
       indices: 
@@ -293,10 +299,10 @@ TextureImporter:
       name: Lightning sprite_8
       rect:
         serializedVersion: 2
-        x: 8192
+        x: 2048
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,7 +310,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 447e18f2efa44f741b3ba535575f83c3
+      spriteID: 01716b1f04fbeac4da6ac33cd6f3867e
       internalID: -2401689213814164286
       vertices: []
       indices: 
@@ -314,10 +320,10 @@ TextureImporter:
       name: Lightning sprite_9
       rect:
         serializedVersion: 2
-        x: 9216
+        x: 2304
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,7 +331,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e15eaaf375c7099428d3ea47ddb91a0c
+      spriteID: 51766b4b591d0024bae58ddc19a3a6a3
       internalID: 5689462005731768565
       vertices: []
       indices: 
@@ -335,10 +341,10 @@ TextureImporter:
       name: Lightning sprite_10
       rect:
         serializedVersion: 2
-        x: 10240
+        x: 2560
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,7 +352,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 634a095d21347504fa15104233813818
+      spriteID: 93f3c687db548234ebf259530f3442e0
       internalID: -6539236857194456433
       vertices: []
       indices: 
@@ -356,10 +362,10 @@ TextureImporter:
       name: Lightning sprite_11
       rect:
         serializedVersion: 2
-        x: 11264
+        x: 2816
         y: 0
-        width: 1024
-        height: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,7 +373,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6899bd0410adde439ff665ff5f93a97
+      spriteID: 1114cf25bb2459645b2031e5e2d1e8bd
       internalID: 1762809247917416155
       vertices: []
       indices: 
