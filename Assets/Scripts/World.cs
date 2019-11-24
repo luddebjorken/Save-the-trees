@@ -18,6 +18,7 @@ public class World : MonoBehaviour
     public Transform LightningModel;
     public Transform RainModel;
     public Transform WindModel;
+    public Transform WaveModel;
     [Header("Tile reference")]
     public Transform TilePrefab;
     public Transform WaterTilePrefab;

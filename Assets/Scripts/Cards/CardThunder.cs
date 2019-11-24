@@ -11,6 +11,7 @@ public class CardThunder : CardBase
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
+        if(!Currency.singleton.Pay(Price)) return;
         InteractComponent.singleton.RainFade();
         if(selectedTiles == null) Debug.LogError("NO TILES WERE FOUND!");
         foreach(InteractTile selectedTile in selectedTiles)

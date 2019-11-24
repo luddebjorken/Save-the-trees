@@ -9,6 +9,7 @@ public class CardWind : CardBase
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
+        if(!Currency.singleton.Pay(Price)) return;
         if(selectedTiles == null) Debug.LogError("NO TILES WERE FOUND!");
         int TilesToLight = 0;
         Vector3 windForward = -Vector3.Cross(InteractComponent.singleton.GetDirection(), Vector3.up);
@@ -26,7 +27,7 @@ public class CardWind : CardBase
             }
             else if(TilesToLight >= 2 && (selectedTile.type == TileType.Grass || selectedTile.type == TileType.Tree))
             {
-                selectedTile.SetFireState(true);
+                if(Random.Range(0.0f,1.0f) < 0.25f) selectedTile.SetFireState(true);
                 TilesToLight-=2;
             }
         }

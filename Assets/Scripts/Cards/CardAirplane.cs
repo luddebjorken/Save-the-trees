@@ -8,6 +8,7 @@ public class CardAirplane : CardBase
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
+        if(!Currency.singleton.Pay(Price)) return;
         SoundHandler.singleton.CardSource.PlayOneShot(UseSound[Random.Range(0,UseSound.Length)]);
         if(selectedTiles == null) Debug.LogError("NO TILES WERE FOUND!");
         foreach(InteractTile selectedTile in selectedTiles)

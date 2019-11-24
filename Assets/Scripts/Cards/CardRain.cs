@@ -8,6 +8,7 @@ public class CardRain : CardBase
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
+        if(!Currency.singleton.Pay(Price)) return;
         InteractComponent.singleton.RainFade();
         Destroy(Instantiate(World.singleton.RainModel, tile.transform.position + new Vector3(0,1f,0),Quaternion.Euler(0,45,0)).gameObject,1);
         SoundHandler.singleton.CardSource.PlayOneShot(UseSound[Random.Range(0,UseSound.Length)]);

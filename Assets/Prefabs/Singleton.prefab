@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4907440377291614848}
   - component: {fileID: 4907440377291614851}
   - component: {fileID: 238572740}
+  - component: {fileID: 740094633}
   m_Layer: 0
   m_Name: Singleton
   m_TagString: Untagged
@@ -68,6 +69,8 @@ MonoBehaviour:
     type: 3}
   WindModel: {fileID: 7341174445942785766, guid: 4d918326ed2e1924baaf1f23cd2e238d,
     type: 3}
+  WaveModel: {fileID: 8136550022004313896, guid: e5cf47db85c102c41b3651046dad2569,
+    type: 3}
   TilePrefab: {fileID: 6973778312745794222, guid: 2fff3bd3ef7275c4d9132a183b839263,
     type: 3}
   WaterTilePrefab: {fileID: 6973778312745794222, guid: c037f7d51484ce340aa59e372f8c31e1,
@@ -101,4 +104,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathTime: 3
+  GameOverScreen: {fileID: 0}
   HPBar: {fileID: 0}
+  TimerText: {fileID: 0}
+  time: 0
+  TreeThreshold: 20
+--- !u!114 &740094633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907440377291614850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8da90fadb58584ab73fe198551d7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrencyFadeText: {fileID: 2536178044299197938, guid: 974a9232d58889f4bb5e47d45a996e05,
+    type: 3}
+  CurrencyFadeTextDuration: 0
+  CurrencyText: {fileID: 0}
+  CurrentCurrency: 20
+  MaxCurrencyPerTick: 10
+  tickLength: 5

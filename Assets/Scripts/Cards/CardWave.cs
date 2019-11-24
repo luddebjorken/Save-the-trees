@@ -36,6 +36,13 @@ public class CardWave : CardBase
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
+        if(selectedTiles.Count <= 0) return;
+        Vector3 windForward = -Vector3.Cross(InteractComponent.singleton.GetDirection(), Vector3.up);
+        Destroy(Instantiate(World.singleton.WaveModel, tile.transform.position + new Vector3(0,5,0), Quaternion.LookRotation(windForward,Vector3.up)).gameObject,1);
+        Destroy(Instantiate(World.singleton.WaveModel, tile.transform.position + new Vector3(0,3,0) + windForward*Radius, Quaternion.LookRotation(windForward,Vector3.up)).gameObject,1);
+        Destroy(Instantiate(World.singleton.WaveModel, tile.transform.position + new Vector3(0,3,0) - windForward*Radius, Quaternion.LookRotation(windForward,Vector3.up)).gameObject,1);
+
+        if(!Currency.singleton.Pay(Price)) return;
         if(selectedTiles == null) Debug.LogError("NO TILES WERE FOUND!");
         foreach(InteractTile selectedTile in selectedTiles)
         {
@@ -61,11 +68,15 @@ public class CardWave : CardBase
     {
         List<InteractTile> ret = new List<InteractTile>();
         bool HasWater = false;
+        
         Collider[] HitColliders = Physics.OverlapCapsule(center.transform.position, center.transform.position + InteractComponent.singleton.GetDirection() * Range, Radius, 1 << 8);
         foreach(Collider HitCollider in HitColliders){
             InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
             if(TileComponent){
-                if(TileComponent.type == TileType.Water) HasWater = true;
+                if(TileComponent.type == TileType.Water) 
+                {
+                    HasWater = true;
+                }
                 ret.Add(TileComponent);
             }
         }
