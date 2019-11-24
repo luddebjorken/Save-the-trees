@@ -12,7 +12,9 @@ public class CardBase : MonoBehaviour
     public virtual void HoverStart(InteractTile tile){}
     public virtual void HoverEnd(InteractTile tile){}
     protected Image graphic;
-
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
     void Awake()
     {
         graphic = GetComponent<Image>();
@@ -29,5 +31,7 @@ public class CardBase : MonoBehaviour
         if(!Currency.singleton.CanAfford(Price))return;
         InteractComponent.singleton.HighlightTiles(new List<InteractTile>());
         InteractComponent.singleton.currentCard = this;
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        InteractComponent.singleton.CustomCursor = true;
     }
 }

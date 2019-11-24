@@ -15,6 +15,7 @@ public class InteractComponent : MonoBehaviour
     public Color HighlightTint, FireHighlightTint;
     private Coroutine RainFadeRoutine;
     private Coroutine LightningRoutine;
+    public bool CustomCursor = false;
     void Start()
     {
         singleton = this;
@@ -53,6 +54,10 @@ public class InteractComponent : MonoBehaviour
         {
             currentCard = null;
             HighlightTiles(new List<InteractTile>());
+        }
+
+        if(currentCard == null && CustomCursor){
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
     }
 
