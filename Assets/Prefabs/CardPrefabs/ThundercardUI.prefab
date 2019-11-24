@@ -336,6 +336,9 @@ MonoBehaviour:
   UseSound:
   - {fileID: 8300000, guid: 3e47bf3596f63974895d5cf119b7f92a, type: 3}
   - {fileID: 8300000, guid: ce97f87233649ab4fbe6243f4413e325, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 489efa5a28a711b4d8e47298e29c1a42, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   LightningClip:
   - {fileID: 8300000, guid: 2f05d7742f68d1a46a7bab58f1dba9d1, type: 3}
   - {fileID: 8300000, guid: 00a328f1abe383b43905e3751807f553, type: 3}

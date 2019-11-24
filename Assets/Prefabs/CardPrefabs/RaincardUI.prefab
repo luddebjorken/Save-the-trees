@@ -256,6 +256,9 @@ MonoBehaviour:
   Price: 5
   UseSound:
   - {fileID: 8300000, guid: 892f05b321c33c940b9d5b9767c34443, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 3b6110051503dc846a6b8f3ba02e99f1, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   Radius: 3
 --- !u!1 &8365950837377004552
 GameObject:
