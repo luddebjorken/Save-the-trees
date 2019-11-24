@@ -14,6 +14,7 @@ public class World : MonoBehaviour
     public Transform HouseModel;
     public Transform GrassModel;
     public Transform FireModel;
+    public Transform WindModel;
     [Header("Tile reference")]
     public Transform TilePrefab;
     public Transform WaterTilePrefab;
@@ -37,6 +38,7 @@ public class World : MonoBehaviour
     public float RandomFireStartMaxCount;
     public List<InteractTile> TreesPlaced;
     public int TreesAmount;
+    public int FireCount;
     
     // Start is called before the first frame update
     void Awake()
@@ -89,7 +91,7 @@ public class World : MonoBehaviour
 
         do
         {
-            Collider[] HitColliders = Physics.OverlapSphere(new Vector3(currPos.x, 0, currPos.y),RiverStepDistance);
+            Collider[] HitColliders = Physics.OverlapSphere(new Vector3(currPos.x, 0, currPos.y),RiverStepDistance, 1 << 8);
             foreach(Collider HitCollider in HitColliders){
                 InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
                 if(TileComponent){
@@ -106,7 +108,7 @@ public class World : MonoBehaviour
             currPos += direction * RiverStepDistance;
             direction += tangent * Random.Range(-1.0f,1.0f) * RiverTurnStrength;
             direction.Normalize();
-        }while(currPos.x != 0 && currPos.y != 0 && currPos.x < Size.x && currPos.y < Size.y);
+        }while(currPos.x > 0 && currPos.y > 0 && currPos.x < Size.x && currPos.y < Size.y);
 
         //Border water tiles
         for(int x = (int)(-Size.x*0.5f) - 1; x < Size.x*1.5 + 3; x++)
@@ -199,7 +201,7 @@ public class World : MonoBehaviour
         {
             for(int i = 0; i < Random.Range(0,RandomFireStartMaxCount); i++)
             {
-                Collider[] HitColliders = Physics.OverlapSphere(GetRandomTile().transform.position, Random.Range(0.0f, RandomFireStartRadius));
+                Collider[] HitColliders = Physics.OverlapSphere(GetRandomTile().transform.position, Random.Range(0.0f, RandomFireStartRadius), 1 << 8);
                 foreach(Collider HitCollider in HitColliders){
                     InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
                     if(TileComponent){

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractComponent : MonoBehaviour
 {
     // Start is called before the first frame update
     public CardBase currentCard;
+    public Image FlashImage;
     public int direction;
     List<InteractTile> highlitTiles;
     public static InteractComponent singleton;

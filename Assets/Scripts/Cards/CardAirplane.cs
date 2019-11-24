@@ -8,6 +8,7 @@ public class CardAirplane : CardBase
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
+        SoundHandler.singleton.CardSource.PlayOneShot(UseSound[Random.Range(0,UseSound.Length)]);
         if(selectedTiles == null) Debug.LogError("NO TILES WERE FOUND!");
         foreach(InteractTile selectedTile in selectedTiles)
         {
@@ -36,7 +37,7 @@ public class CardAirplane : CardBase
     {
         List<InteractTile> ret = new List<InteractTile>();
 
-        Collider[] HitColliders = Physics.OverlapCapsule(center.transform.position, center.transform.position + InteractComponent.singleton.GetDirection() * Range, 1f);
+        Collider[] HitColliders = Physics.OverlapCapsule(center.transform.position, center.transform.position + InteractComponent.singleton.GetDirection() * Range, 1f, 1 << 8);
         foreach(Collider HitCollider in HitColliders){
             InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
             if(TileComponent){

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CardBase : MonoBehaviour
 {
     public int Price;
+    public AudioClip[] UseSound;
     protected InteractTile LastTile;
     public virtual void Use(InteractTile tile){}
     public virtual void HoverStart(InteractTile tile){}

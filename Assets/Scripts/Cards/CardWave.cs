@@ -34,7 +34,7 @@ public class CardWave : CardBase
     {
         List<InteractTile> ret = new List<InteractTile>();
         bool HasWater = false;
-        Collider[] HitColliders = Physics.OverlapCapsule(center.transform.position, center.transform.position + InteractComponent.singleton.GetDirection() * Range, Radius);
+        Collider[] HitColliders = Physics.OverlapCapsule(center.transform.position, center.transform.position + InteractComponent.singleton.GetDirection() * Range, Radius, 1 << 8);
         foreach(Collider HitCollider in HitColliders){
             InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
             if(TileComponent){

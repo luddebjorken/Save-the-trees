@@ -11,6 +11,9 @@ public class CardWind : CardBase
     {
         if(selectedTiles == null) Debug.LogError("NO TILES WERE FOUND!");
         int TilesToLight = 0;
+        Vector3 windForward = -Vector3.Cross(InteractComponent.singleton.GetDirection(), Vector3.up);
+        Destroy(Instantiate(World.singleton.WindModel, tile.transform.position + new Vector3(0,2,0) + InteractComponent.singleton.GetDirection() * 10, Quaternion.LookRotation(windForward,Vector3.up)).gameObject,1);
+
         foreach(InteractTile selectedTile in selectedTiles)
         {
             if(Vector3.Distance(tile.transform.position, selectedTile.transform.position) < ExtinguishRange)
@@ -47,7 +50,7 @@ public class CardWind : CardBase
     {
         List<InteractTile> ret = new List<InteractTile>();
 
-        Collider[] HitColliders = Physics.OverlapCapsule(center.transform.position, center.transform.position + InteractComponent.singleton.GetDirection() * World.singleton.Size.magnitude, Radius);
+        Collider[] HitColliders = Physics.OverlapCapsule(center.transform.position, center.transform.position + InteractComponent.singleton.GetDirection() * World.singleton.Size.magnitude, Radius, 1 << 8);
         foreach(Collider HitCollider in HitColliders){
             InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
             if(TileComponent){

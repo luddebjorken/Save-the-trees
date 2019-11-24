@@ -8,6 +8,7 @@ public class CardRain : CardBase
     private List<InteractTile> selectedTiles;
     public override void Use(InteractTile tile)
     {
+        SoundHandler.singleton.CardSource.PlayOneShot(UseSound[Random.Range(0,UseSound.Length)]);
         if(selectedTiles == null) Debug.LogError("NO TILES WERE FOUND!");
         foreach(InteractTile selectedTile in selectedTiles)
         {
@@ -33,7 +34,7 @@ public class CardRain : CardBase
     {
         List<InteractTile> ret = new List<InteractTile>();
 
-        Collider[] HitColliders = Physics.OverlapSphere(center.transform.position,Radius);
+        Collider[] HitColliders = Physics.OverlapSphere(center.transform.position,Radius, 1 << 8);
         foreach(Collider HitCollider in HitColliders){
             InteractTile TileComponent = HitCollider.GetComponent<InteractTile>();
             if(TileComponent){

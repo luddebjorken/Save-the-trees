@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3442076936599287200}
   - component: {fileID: 8380185678489744976}
   - component: {fileID: 2624834689957599638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472543070749074950}
-  m_Mesh: {fileID: 2866255845738885060, guid: f858344de57255840bdb4821bbecf167, type: 3}
+  m_Mesh: {fileID: 420634776737977212, guid: 0405395ddd19f8e43b0e7ba0e570213a, type: 3}
 --- !u!23 &3442076936599287200
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   HasTree: 0
   IsBurning: 0
   BurnStart: 0
-  Child: {fileID: 0}
   x: 0
   y: 0
   Material: {fileID: 0}
+  Child: {fileID: 0}
